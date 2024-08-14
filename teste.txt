@@ -1,0 +1,7 @@
+
+        let taxaJurosHTML = document.getElementById('taxaJuros');
+        let numeroPrestacaoHTML = document.getElementById('numeroPrestacao');
+ let valorEmprestimo = valorEmprestimoHTML.getAttribute('value');
+        let numeroCarencia = numeroCarenciaHTML.getAttribute('value');
+        
+        let numeroPrestacao = numeroCarenciaHTML.getAttribute('value');

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+    <head>
+        <script src="/simulador.js" />
+        <title>0</title>
+    </head>
+
+    <body>
+        <form>
+            <Table>
+                <tr>
+                    <th>
+                        <label title="Valor do Emprestimo:">
+                            <input type="number" id="valorEmprestimo" placeholder="Valor do Emprestismo" value="100" />
+                    </th>
+                    <th>
+                        <input type="number" id="taxaJuros" placeholder="Taxa de Juros" value="1.00" />
+                    </th>
+                    <th>
+                        <input type="number" id="numeroCarencia" placeholder="Numero de Carência" />
+                    </th>
+                    <th>
+                        <input type="number" id="numeroPrestacao" placeholder="Numero de Prestação" />
+                    </th>
+                    <th>
+                        <input type="button" value="Simule o emprestimo" onclick="tabela()" />
+                    </th>
+                </tr>
+            </Table>
+        </form>
+        <p id="test">a</p>
+        <table border="1" id="tabela">
+            <tr>
+                <th>Mês</th>
+                <th>Saldo</th>
+                <th>Amortização</th>
+                <th>Juros</th>
+                <th>Prestação</th>
+            </tr>
+        </table>
+    </body>
+
+</html>
