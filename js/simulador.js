@@ -16,6 +16,10 @@ class SimuladorEmprestimo {
         }
         return total;
     }
+
+    tabelas(){
+        tabela()
+    }
 }
 // Comum
 function erroPreenchimento(vaiPagar,

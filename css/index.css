@@ -2,24 +2,44 @@
     box-sizing: border-box;
 }
 
+.formulario {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+    border: 10px;
+}
+
+body {
+    background-color: black;
+
+}
+
+table {
+    background-color: ghostwhite;
+
+}
+
 /* Create three equal columns that floats next to each other */
-#tabelaSPC {
+.tabelaSPC {
 
     text-decoration: #8f2121;
 }
 
 .coluna {
     float: left;
-    width: 33.33%;
+    width: 33%;
     padding: 10px;
     height: 300px;
     border: 10px;
+
     /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
 .linha:after {
+    align-items: center;
     content: "";
-    display: table;
+    display: table-column-group;
     clear: both;
 }
