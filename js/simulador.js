@@ -25,37 +25,37 @@ function erroPreenchimento(vaiPagar,
     if (isNaN(valorEmprestimoHTML)) {
         texto += "Você não informou o valor do emprestimo\n"
         cont++;
-    } 
-    else if(valorEmprestimoHTML<=0){
+    }
+    else if (valorEmprestimoHTML <= 0) {
         texto += "Você informou o valor do emprestimo menor ou igual a Zero\n"
         cont++;
     }
     if (isNaN(taxaJurosHTML)) {
         texto += "Você não informou o valor da taxa de Juros\n"
         cont++;
-    } 
-    else if(taxaJurosHTML<=0){
+    }
+    else if (taxaJurosHTML <= 0) {
         texto += "Você informou o valor da taxa juros menor ou igual a Zero\n"
         cont++;
     }
     if (isNaN(numeroCarenciaHTML)) {
         texto += "Você não informou o valor da Carencia\n"
         cont++;
-    } 
-    else if(numeroCarenciaHTML<0){
+    }
+    else if (numeroCarenciaHTML < 0) {
         texto += "Você informou o valor da Carencia menor do que Zero\n"
         cont++;
     }
     if (isNaN(numeroPrestacaoHTML)) {
         texto += "Você não informou o valor da Prestação\n"
         cont++;
-    } 
-    else if(numeroPrestacaoHTML<=0){
+    }
+    else if (numeroPrestacaoHTML <= 0) {
         texto += "Você informou o valor da Prestação menor e iqual a Zero\n"
         cont++;
     }
 
-    if (cont > 0) { 
+    if (cont > 0) {
         alert(texto)
     }
     return cont === 0;
@@ -119,11 +119,11 @@ function tabela() {
     let numeroCarenciaHTML = conveterHTMltoInt(document.getElementById('numeroCarencia'));
     let numeroPrestacaoHTML = conveterHTMltoInt(document.getElementById('numeroPrestacao'));
     let vaiPagar = true;
-    
+
     if (erroPreenchimento(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML)) {
         tabelaSAC(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
         tabelaSPC(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
-       // tabelaSAM(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
+        // tabelaSAM(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
     }
 }
 
@@ -165,6 +165,9 @@ function tabelaSAC(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaH
             totalJuros += juros;
             totalPrestacao += prestacao;
         }
+    }
+    else if (carencia === 0) {
+        saldoAtual = saldo;
     }
 
     if (numberPrestacao > 0) {
@@ -238,6 +241,8 @@ function tabelaSPC(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaH
             totalJuros += juros;
             totalPrestacao += prestacao;
         }
+    } else if(carencia === 0){
+        saldoAtual = saldo;
     }
 
     if (numberPrestacao > 0) {
