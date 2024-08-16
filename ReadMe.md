@@ -7,10 +7,10 @@
 
 ## Funcionalidade
 
-> [X] Calculo da tabela SAC [Sistema de Amortização Constante]
+> [X] Calculo da tabela SAC - Sistema de Amortização Constante
 >   [ ] Cacular  a prestação do SAC
-> [X] Calculo da tabela SPC [Sistema de Prestação Constante]
-> [ ] Calculo da tabela SAM [Sistema de Amortização Mista]
+> [X] Calculo da tabela SPC - Sistema de Prestação Constante
+> [ ] Calculo da tabela SAM -Sistema de Amortização Mista
 
 ## :writing_hand: Este documento e escrito em:
 
