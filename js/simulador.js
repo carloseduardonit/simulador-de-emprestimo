@@ -103,7 +103,7 @@ function alimentarTabela(mes, saldo, amortizacao, juros, prestacao) {
     return texto;
 }
 function cabelho(nome) {
-    return '<table border="1" >' + '<caption>' + nome + '</caption>'
+    return '<table border="1" >' + '<tr><td colspan ="5">' + nome + '</td></tr>'
         + alimentarTabela('Mês', 'Saldo', 'Amortização', 'Juros', 'Prestação');
 }
 function linhaTotal(totalAmortizacao, totalJuros, totalPrestacao, taxaJuros) {

@@ -19,9 +19,12 @@ body {
 }
 
 table {
-    background-color: ghostwhite;
+    
+    background-color: white;
 
 }
+
+
 
 /* Create three equal columns that floats next to each other */
 .tabelaSPC {
@@ -37,6 +40,8 @@ table {
     image-rendering: auto;
     table-layout: auto;
     align-items: center;
+    
+    
 
     /* Should be removed. Only for demonstration */
 }
