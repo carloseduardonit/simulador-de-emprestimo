@@ -5,6 +5,13 @@
 > - Mostrar meu conhecimento em HTML,CSS, Javascripts
 > - Mostrar meus conhecimentos em Matematica Financeira.
 
+## Funcionalidade
+
+> [X] Calculo da tabela SAC [Sistema de Amortização Constante]
+>   [ ] Cacular  a prestação do SAC
+> [X] Calculo da tabela SPC [Sistema de Prestação Constante]
+> [ ] Calculo da tabela SAM [Sistema de Amortização Mista]
+
 ## :writing_hand: Este documento e escrito em:
 
 > ![Markdown](https://img.shields.io/badge/Markdown-000?style=for-the-badge&logo=markdown)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
