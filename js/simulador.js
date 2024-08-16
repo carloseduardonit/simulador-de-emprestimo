@@ -22,6 +22,22 @@ class SimuladorEmprestimo {
     }
 }
 // Comum
+function deboxeSAC() {
+    let tabelaHTML = document.getElementById("tabelaSAC");
+let imagem ='<img src="https://media.tenor.com/nR9iDKkkHvMAAAAM/deboche.gif" width="400" height="400" alt="a close up of a person s face with a smiley face on their head ." loading="lazy">';
+    tabelaHTML.innerHTML = imagem;
+}
+function deboxeSPC() {
+    let tabelaHTML = document.getElementById("tabelaSPC");
+let imagem ='<img src="https://media1.tenor.com/m/2mHG39xCnssAAAAC/carinha-de-anjo-cda.gif" width="400" height="400" alt="a little girl with a crown on her head is eating a candy" style="max-width: 833px;">';
+    tabelaHTML.innerHTML = imagem;
+}
+function deboxeSAM() {
+    let tabelaHTML = document.getElementById("tabelaSAM");
+let imagem ='<img src="https://media.tenor.com/d_lG-IlpmvcAAAAM/ahmetbb.gif" width="262.5" height="400" alt="a painting of a woman in a blue dress with flowers in her hair" loading="lazy">';
+    tabelaHTML.innerHTML = imagem;
+}
+
 function erroPreenchimento(vaiPagar,
     valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML) {
     let cont = 0, texto = "";
