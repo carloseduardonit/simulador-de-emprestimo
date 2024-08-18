@@ -1,31 +1,13 @@
-class SimuladorEmprestimo {
-    saldoSPC;
-    saldoSAC;
-    amortizacaoSPC;
-    amortizacaoSAC;
-    jurosSPC;
-    jurosSAC;
-    prestacaoSPC;
-    prestacaoSAC;
-    totalizador(array) {
-        let a = new Array();
-        a = array;
-        let total = 0;
-        for (let i = 0; i < a.length; i++) {
-            total += a[i];
-        }
-        return total;
-    }
-
-    tabelas(){
-        tabela()
-    }
+function preencher() {
+    let valorEmprestimoHTML = conveterHTMltoFloat(document.getElementById('valorEmprestimo'));
+    let taxaJurosHTML = conveterHTMltoFloat(document.getElementById('taxaJuros'));
+    let numeroCarenciaHTML = conveterHTMltoInt(document.getElementById('numeroCarencia'));
+    let numeroPrestacaoHTML = conveterHTMltoInt(document.getElementById('numeroPrestacao'));
+    valorEmprestimoHTML.innerHTML = 430000;
+    taxaJurosHTML.innerHTML = 9.7;
+    numeroCarenciaHTML.innerHTML = 2;
+    numeroPrestacaoHTML.innerHTML = 18;
 }
-// Comum
-
-
-
-
 function formatarValor(valor) {
     if (isNaN(valor)) {
         return valor;
@@ -75,6 +57,3 @@ function tabela() {
         SAM.tabela(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
     }
 }
-
-
-//SAM

@@ -3,7 +3,7 @@ class SAC extends Comum {
     constructor() {
         super();
     }
-    
+
     static calculeValorAmotização(numeroPrestacao, valorEmprestimo) {
         return Number.parseFloat((valorEmprestimo / numeroPrestacao));
     }
@@ -29,23 +29,24 @@ class SAC extends Comum {
         let amortizacao = 0.00;
         let juros = 0.00;
         let prestacao = 0.00;
-    
+
         let mes = 0;
         let totalAmortizacao = 0.00;
         let totalJuros = 0.00;
         let totalPrestacao = 0.00;
         let saldoAtual, saldoAnterior;
-    
-        let texto = cabelho(SAC.nomeTabela(vaiPagar,carencia))
+
+        let texto = cabelho(SAC.nomeTabela(vaiPagar, carencia))
             + alimentarTabela(mes, saldo, amortizacao, juros, prestacao);
-    
+
         if (carencia > 0) {
             juros = SAC.calculeValorJurosCarencia(vaiPagar, saldo, taxaJuros);
             saldoAtual = SAC.calculeValorSaldoCarencia(vaiPagar, saldo, taxaJuros);
             saldoAnterior = saldoAtual;
-            for (var i = mes + 1; i <= carencia; i++) {
-                mes = i;
+            for (var index = mes + 1; index <= carencia; index++) {
+                mes = index;
                 prestacao = SAC.calculeValordaPrestacao(amortizacao, juros);
+                SAC.alimentarArray(index,saldoAtual,amortizacao,juros,prestacao);
                 texto += alimentarTabela(mes, saldoAtual, amortizacao, juros, prestacao);
                 juros = SAC.calculeValorJurosCarencia(vaiPagar, saldoAnterior, taxaJuros);
                 saldoAnterior = saldoAtual;
@@ -58,16 +59,17 @@ class SAC extends Comum {
         else if (carencia === 0) {
             saldoAtual = saldo;
         }
-    
+
         if (numberPrestacao > 0) {
             amortizacao = SAC.calculeValorAmotização(numberPrestacao, saldoAtual);
             saldoAnterior = saldoAtual;
             saldoAtual = saldoAnterior - amortizacao;
-    
+
             juros = SAC.calculeValorJuros(saldo, taxaJuros);
-            for (var i = (carencia + 1); i <= (carencia + numberPrestacao); i++) {
-                mes = i;
+            for (var index = (carencia + 1); index <= (carencia + numberPrestacao); index++) {
+                mes = index;
                 prestacao = SAC.calculeValordaPrestacao(amortizacao, juros);
+                SAC.alimentarArray(index, saldoAtual, amortizacao, juros, prestacao);
                 texto += alimentarTabela(mes, saldoAtual, amortizacao, juros, prestacao);
                 totalAmortizacao += amortizacao;
                 totalJuros += juros;
@@ -75,7 +77,7 @@ class SAC extends Comum {
                 saldoAnterior = saldoAtual;
                 saldoAtual -= amortizacao;
                 juros = SAC.calculeValorJuros(saldoAnterior, taxaJuros);
-    
+
             }
         }
         texto += linhaTotal(totalAmortizacao, totalJuros, totalPrestacao, taxaJuros)

@@ -50,9 +50,10 @@ class SPC extends Comum {
             juros = SPC.calculeValorJurosCarencia(vaiPagar, saldo, taxaJuros);
             saldoAtual = SPC.calculeValorSaldoCarencia(vaiPagar, saldo, taxaJuros);
 
-            for (var i = mes + 1; i <= carencia; i++) {
-                mes = i;
+            for (var index = mes + 1; index <= carencia; index++) {
+                mes = index;
                 prestacao = SAC.calculeValordaPrestacao(amortizacao, juros);
+                SPC.alimentarArray(index, saldoAtual, amortizacao, juros, prestacao);
                 texto += alimentarTabela(mes, saldoAtual, amortizacao, juros, prestacao);
                 saldoAnterior = saldoAtual;
                 juros = SPC.calculeValorJurosCarencia(vaiPagar, saldoAnterior, taxaJuros);
@@ -70,12 +71,13 @@ class SPC extends Comum {
             saldoAtual = saldoAnterior - amortizacao;
             juros = SPC.calculeValorJuros(valorEmprestimo, taxaJuros);
             prestacao = SPC.calculeValordaPrestacao(saldoAnterior, taxaJuros, numberPrestacao);
-            for (var i = (carencia + 1); i <= (carencia + numberPrestacao); i++) {
-                mes = i;
+            for (var index = (carencia + 1); index <= (carencia + numberPrestacao); index++) {
+                mes = index;
                 saldoAnterior = saldoAtual;
                 juros = SPC.calculeValorJuros(saldoAnterior, taxaJuros);
                 amortizacao = SPC.calculeValorAmotização(prestacao, juros);
-                saldoAtual -= amortizacao;
+                saldoAtual = SPC.calculeValorSaldoAtual(saldoAnterior, amortizacao);
+                SPC.alimentarArray(index, saldoAtual, amortizacao, juros, prestacao);
                 texto += alimentarTabela(mes, saldoAtual, amortizacao, juros, prestacao);
                 totalAmortizacao += amortizacao;
                 totalJuros += juros;

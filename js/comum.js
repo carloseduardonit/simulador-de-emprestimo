@@ -1,12 +1,27 @@
 class Comum {
     static nome;
-    static prestacaoSAC = [];
-    static prestacaoSPC = [];
-    static juroSAC = [];
-    static juroSPC = [];
+    static saldoSAC = [];
+    static saldoSPC = [];
     static amortizacaoSAC = [];
     static amortizacaoSPC = [];
-    
+    static juroSAC = [];
+    static juroSPC = [];
+    static prestacaoSAC = [];
+    static prestacaoSPC = [];
+
+    static alimentarArray(index, saldoAtual, amortizacao, juro, prestacao) {
+        if (this.getNome() === "SAC") {
+            this.saldoSAC[index] = saldoAtual;
+            this.amortizacaoSAC[index] = amortizacao;
+            this.juroSAC[index] = juro;
+            this.prestacaoSAC[index] = prestacao;
+        } else if(this.getNome()==="SPC"){
+            this.saldoSPC[index] =saldoAtual;
+            this.amortizacaoSPC[index] =amortizacao;
+            this.juroSPC[index] =juro;
+            this.prestacaoSPC[index] = prestacao;
+        }
+    }
     constructor() {
 
     }
@@ -32,7 +47,7 @@ class Comum {
         }
         return 0.00;
     }
-    static setNome(nome){
+    static setNome(nome) {
         this.nome = nome;
     }
     static getNome() {
@@ -41,7 +56,7 @@ class Comum {
     static nomeTabela(vaiPagar, numeroCarencia) {
         let texto = "";
         if (numeroCarencia > 0) {
-            texto += ' com carencia de '+ numeroCarencia +' meses';
+            texto += ' com carencia de ' + numeroCarencia + ' meses';
             if (vaiPagar) {
                 texto += " e com pagamento de juros";
             } else {
@@ -53,4 +68,34 @@ class Comum {
 
         return this.getNome() + texto;
     }
+
+    static getSaldo(index){
+        if (this.getNome()==="SAC") {
+            return this.saldoSAC[index];
+        } else if (this.getNome()==="SPC") {
+            return this.saldoSPC[index];
+        }
+    }
+    static getAmortizacao(index){
+        if (this.getNome()==="SAC") {
+            return this.amortizacaoSAC[index];
+        } else if (this.getNome()==="SPC") {
+            return this.amortizacaoSPC[index];
+        }
+    }
+    static getJuro(index){
+        if (this.getNome()==="SAC") {
+            return this.juroSAC[index];
+        } else if (this.getNome()==="SPC") {
+            return this.juroSPC[index];
+        }
+    }
+    static getPrestacao(index){
+        if (this.getNome()==="SAC") {
+            return this.prestacaoSAC[index];
+        } else if (this.getNome()==="SPC") {
+            return this.prestacaoSPC[index];
+        }
+    }
+    
 }

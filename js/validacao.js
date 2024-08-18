@@ -1,11 +1,13 @@
 class Validacao {
     constructor() {
-        
-    }
 
-    static erroPreenchimento(vaiPagar,  valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML) {
+    }
+    static notUndefined(value) {
+        return value != undefined;
+    }
+    static erroPreenchimento(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML) {
         let cont = 0, texto = "";
-    
+
         if (isNaN(valorEmprestimoHTML)) {
             texto += "Você não informou o valor do emprestimo\n"
             cont++;
@@ -38,7 +40,7 @@ class Validacao {
             texto += "Você informou o valor da Prestação menor e iqual a Zero\n"
             cont++;
         }
-    
+
         if (cont > 0) {
             alert(texto)
         }
