@@ -5,10 +5,16 @@
     <title>Simulador de Emprestimo</title>
     <link rel="stylesheet" href="css\index.css">
     <script type="text/javascript" src="js\simulador.js"></script>
+    <script type="text/javascript" src="js\comum.js"></script>
+    <script type="text/javascript" src="js\spc.js"></script>
+    <script type="text/javascript" src="js\sac.js"></script>
+    <script type="text/javascript" src="js\sam.js"></script>
+    <script type="text/javascript" src ="js\validacao.js"></script>
+    <script type="text/javascript" src="js\tabelaformatar.js"></script>
 </head>
 
 <body>
-    
+
     <div id="formulario">
         <form>
             <table>
@@ -19,11 +25,11 @@
                     </th>
                     <th>
                         <label for="html">Taxa de Juros:</label><br>
-                        <input type="number" id="taxaJuros" placeholder="Taxa de Juros" value="1"/>
+                        <input type="number" id="taxaJuros" placeholder="Taxa de Juros" value="1" />
                     </th>
                     <th>
                         <label for="html">Numero de Carência:</label><br>
-                        <input type="number" id="numeroCarencia" placeholder="Numero de Carência" value="0"/>
+                        <input type="number" id="numeroCarencia" placeholder="Numero de Carência" value="0" />
                     </th>
                     <!--th>
                     <label for="html">Vai pagar Juros na carencia?</label><br>
@@ -31,7 +37,7 @@
                 </th-->
                     <th>
                         <label for="html">Numero de Prestação:</label><br>
-                        <input type="number" id="numeroPrestacao" placeholder="Numero de Prestação" value="1"/>
+                        <input type="number" id="numeroPrestacao" placeholder="Numero de Prestação" value="1" />
                     </th>
                     <th>
                         <input onclick="tabela()" type="button" value="Simule o emprestimo" />
@@ -40,53 +46,47 @@
             </table>
         </form>
     </div>
-    
+
     <div class="linha">
-        <div id="tabelaSAC" onmouseenter="deboxeSAC()" onmouseout="tabela()" class="coluna"></div>
-        <div id="tabelaSPC" onmouseenter="deboxeSPC()" onmouseout="tabela()" class="coluna"
+        <div id="tabelaSAC" onmouseenter="SAC.deboxe()" onmouseout="tabela()" class="coluna"></div>
+        <div id="tabelaSPC" onmouseenter="SPC.deboxe()" onmouseout="tabela()" class="coluna"
             style="text-decoration-color: #8f2121;"></div>
-        <div id="tabelaSAM" onmouseenter="deboxeSAM()" onmouseout="tabela()" class="coluna"></div>
+        <div id="tabelaSAM" onmouseenter="SAM.deboxe()" onmouseout="tabela()" class="coluna"></div>
     </div>
 
-    <div >
+    <div class="linha">
         <table>
-            <tr>
-                <td rowspan="5"><img src="image\Qr PIX.jpg" width="200" /></td>
-            </tr>
+            <th>
+            <td colspan="4"><img src="image\Qr PIX.jpg" width="200" /></td>
+            </th>
+        </table>
+        <table>
+            <th>
+            <td>
+                <a href="https://t.me/Carlaol" target="_blank">
+                    <img
+                        src="https://img.shields.io/badge/Telegram-000?style=for-the-badge&logo=telegram&logoColor=2CA5E0" />
+                </a>
 
-            <tr>
-                <td>
-                    <a href="https://t.me/Carlaol" target="_blank">
-                        <img
-                            src="https://img.shields.io/badge/Telegram-000?style=for-the-badge&logo=telegram&logoColor=2CA5E0" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://www.linkedin.com/in/carlos-eduardo-dos-s-figueiredo/" target="_blank">
-                        <img
-                            src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="" target="_blank">
-                        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="mailto:carlostecnicowl+github@gmail.com" target="_blank">
-                        <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
-                    </a>
-                </td>
-            </tr>
-
-            
-            
+            </td>
+            <td>
+                <a href="https://www.linkedin.com/in/carlos-eduardo-dos-s-figueiredo/" target="_blank">
+                    <img
+                        src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+                </a>
+            </td>
+            <td>
+                <a href="https://github.com/carloseduardonit/simulador-de-emprestimo" target="_blank">
+                    <img
+                        src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+                </a>
+            </td>
+            <td>
+                <a href="mailto:carlostecnicowl+github@gmail.com" target="_blank">
+                    <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
+                </a>
+            </td>
+            </th>
         </table>
     </div>
 

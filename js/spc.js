@@ -1,84 +1,89 @@
-class SAC extends Comum {
-    nome = "SAC";
+class SPC extends Comum {
     constructor() {
         super();
     }
-    
-    static calculeValorAmotização(numeroPrestacao, valorEmprestimo) {
-        return Number.parseFloat((valorEmprestimo / numeroPrestacao));
+
+
+    static calculeValordaPrestacao(saldo, taxaJuros, numberPrestacao) {
+        let juros = taxaJuros / 100;
+        let fatorValorPresente = (((1 - (1 + juros) ** (-numberPrestacao))) / juros);
+        return Number.parseFloat(saldo / fatorValorPresente);
     }
-    static calculeValordaPrestacao(amortizacao, juros) {
-        return Number.parseFloat((amortizacao + juros));
+
+
+    static calculeValorAmotização(prestacao, juros) {
+        return Number.parseFloat((prestacao - juros));
     }
+
+
     static deboxe() {
-        let tabelaHTML = document.getElementById("tabelaSAC");
-        let imagem = '<img src="https://media.tenor.com/nR9iDKkkHvMAAAAM/deboche.gif" width="400" height="400" alt="a close up of a person s face with a smiley face on their head ." loading="lazy">';
+        let tabelaHTML = document.getElementById("tabelaSPC");
+        let imagem = '<img src="https://media1.tenor.com/m/2mHG39xCnssAAAAC/carinha-de-anjo-cda.gif" width="400" height="400" alt="a little girl with a crown on her head is eating a candy" style="max-width: 833px;">';
         tabelaHTML.innerHTML = imagem;
     }
 
     static tabela(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML) {
-        this.setNome("SAC");
-        let tabelaHTML = document.getElementById('tabelaSAC');
+        // hTML
+        SPC.setNome("SPC");
+        let tabelaHTML = document.getElementById('tabelaSPC');
         // Manipular dados
+        let valorEmprestimo = valorEmprestimoHTML;
         let taxaJuros = taxaJurosHTML;
         let carencia = numeroCarenciaHTML;
         let numberPrestacao = numeroPrestacaoHTML;
         // preenchimento de variaveis
-        let saldo = 0;
-        saldo = valorEmprestimoHTML;
+        let saldo = valorEmprestimo;
         let amortizacao = 0.00;
         let juros = 0.00;
         let prestacao = 0.00;
-    
+
         let mes = 0;
         let totalAmortizacao = 0.00;
         let totalJuros = 0.00;
         let totalPrestacao = 0.00;
         let saldoAtual, saldoAnterior;
-    
-        let texto = cabelho(SAC.nomeTabela(vaiPagar,carencia))
+
+        let texto = cabelho(SPC.nomeTabela(vaiPagar, carencia))
             + alimentarTabela(mes, saldo, amortizacao, juros, prestacao);
-    
+
         if (carencia > 0) {
-            juros = SAC.calculeValorJurosCarencia(vaiPagar, saldo, taxaJuros);
-            saldoAtual = SAC.calculeValorSaldoCarencia(vaiPagar, saldo, taxaJuros);
-            saldoAnterior = saldoAtual;
+            juros = SPC.calculeValorJurosCarencia(vaiPagar, saldo, taxaJuros);
+            saldoAtual = SPC.calculeValorSaldoCarencia(vaiPagar, saldo, taxaJuros);
+
             for (var i = mes + 1; i <= carencia; i++) {
                 mes = i;
                 prestacao = SAC.calculeValordaPrestacao(amortizacao, juros);
                 texto += alimentarTabela(mes, saldoAtual, amortizacao, juros, prestacao);
-                juros = SAC.calculeValorJurosCarencia(vaiPagar, saldoAnterior, taxaJuros);
                 saldoAnterior = saldoAtual;
-                saldoAtual = SAC.calculeValorSaldoCarencia(vaiPagar, saldoAnterior, taxaJuros);
+                juros = SPC.calculeValorJurosCarencia(vaiPagar, saldoAnterior, taxaJuros);
+                saldoAtual = SPC.calculeValorSaldoCarencia(vaiPagar, saldoAnterior, taxaJuros);
                 totalAmortizacao += amortizacao;
                 totalJuros += juros;
                 totalPrestacao += prestacao;
             }
-        }
-        else if (carencia === 0) {
+        } else if (carencia === 0) {
             saldoAtual = saldo;
         }
-    
+
         if (numberPrestacao > 0) {
-            amortizacao = SAC.calculeValorAmotização(numberPrestacao, saldoAtual);
             saldoAnterior = saldoAtual;
             saldoAtual = saldoAnterior - amortizacao;
-    
-            juros = SAC.calculeValorJuros(saldo, taxaJuros);
+            juros = SPC.calculeValorJuros(valorEmprestimo, taxaJuros);
+            prestacao = SPC.calculeValordaPrestacao(saldoAnterior, taxaJuros, numberPrestacao);
             for (var i = (carencia + 1); i <= (carencia + numberPrestacao); i++) {
                 mes = i;
-                prestacao = SAC.calculeValordaPrestacao(amortizacao, juros);
+                saldoAnterior = saldoAtual;
+                juros = SPC.calculeValorJuros(saldoAnterior, taxaJuros);
+                amortizacao = SPC.calculeValorAmotização(prestacao, juros);
+                saldoAtual -= amortizacao;
                 texto += alimentarTabela(mes, saldoAtual, amortizacao, juros, prestacao);
                 totalAmortizacao += amortizacao;
                 totalJuros += juros;
                 totalPrestacao += prestacao;
-                saldoAnterior = saldoAtual;
-                saldoAtual -= amortizacao;
-                juros = SAC.calculeValorJuros(saldoAnterior, taxaJuros);
-    
             }
         }
         texto += linhaTotal(totalAmortizacao, totalJuros, totalPrestacao, taxaJuros)
         tabelaHTML.innerHTML = texto;
     }
+
 }
