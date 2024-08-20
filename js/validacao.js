@@ -2,6 +2,28 @@ class Validacao {
     constructor() {
 
     }
+    static valorSelecionadoTipoCarencia(){
+        let valor = document.getElementById('tipoCarencia').value;
+        return valor;
+    }
+
+    static temCarencia() {
+        let TDHMTL = document.getElementById('thTipoCarencia');
+        let carencia = conveterHTMltoInt(document.getElementById('numeroCarencia'));
+        let texto = "";
+        if (carencia > 0) {
+            texto = '<label for="html">Vai pagar Juros na carencia como?</label><br>'
+                + '<select name="carencia" id="tipoCarencia">'
+                + '<option value="PJ">Pagamento dos Juros</option>'
+                + '<option value="CJ">Capitalização de Juros</option>'
+                + '<option value="JCASD">Juro Capitalização e  Acrescido de saldo Devedor</option>'
+                + '</select>'
+        } else {
+            texto = "";
+        }
+       TDHMTL.innerHTML = texto;
+
+    }
     static notUndefined(value) {
         return value != undefined;
     }

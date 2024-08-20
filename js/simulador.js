@@ -50,7 +50,6 @@ function tabela() {
     let numeroCarenciaHTML = conveterHTMltoInt(document.getElementById('numeroCarencia'));
     let numeroPrestacaoHTML = conveterHTMltoInt(document.getElementById('numeroPrestacao'));
     let vaiPagar = true;
-
     if (Validacao.erroPreenchimento(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML)) {
         SAC.tabela(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
         SPC.tabela(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);

@@ -40,13 +40,24 @@ class SAC extends Comum {
             + alimentarTabela(mes, saldo, amortizacao, juros, prestacao);
 
         if (carencia > 0) {
-            juros = SAC.calculeValorJurosCarencia(vaiPagar, saldo, taxaJuros);
+            switch (Validacao.valorSelecionadoTipoCarencia()) {
+                case "PJ":
+                    juros = SAC.calculeValorJurosCarencia(vaiPagar, saldo, taxaJuros);
+                    break;
+                case "CJ":
+                    break;
+                case "JCASD":
+                    break;
+                default:
+                    break;
+            }
+            
             saldoAtual = SAC.calculeValorSaldoCarencia(vaiPagar, saldo, taxaJuros);
             saldoAnterior = saldoAtual;
             for (var index = mes + 1; index <= carencia; index++) {
                 mes = index;
                 prestacao = SAC.calculeValordaPrestacao(amortizacao, juros);
-                SAC.alimentarArray(index,saldoAtual,amortizacao,juros,prestacao);
+                SAC.alimentarArray(index, saldoAtual, amortizacao, juros, prestacao);
                 texto += alimentarTabela(mes, saldoAtual, amortizacao, juros, prestacao);
                 juros = SAC.calculeValorJurosCarencia(vaiPagar, saldoAnterior, taxaJuros);
                 saldoAnterior = saldoAtual;

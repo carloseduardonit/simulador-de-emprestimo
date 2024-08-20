@@ -97,5 +97,10 @@ class Comum {
             return this.prestacaoSPC[index];
         }
     }
+    static capitalizadojuros(){
+        let juros;
+        return juros;
+    }
+
     
 }

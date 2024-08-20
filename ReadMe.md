@@ -1,6 +1,6 @@
 # Simulador de Emprestimo
 
-## Objetivo:
+## Objetivo
 
 > - Mostrar meu conhecimento em HTML,CSS, Javascripts
 > - Mostrar meus conhecimentos em Matematica Financeira.
@@ -8,26 +8,27 @@
 ## Funcionalidade
 
 > - [ ] Função Basica
->   - [ ] Calcular a Media em 2 numeros de Matrizes
+>   - [X] Calcular a Media em 2 numeros
 >   - [X] Cabeçalho da Tabelas
 >   - [X] Rodape da Tabelas
+>   - [ ] ...
 > - [X] Calculo da tabela SAC - Sistema de Amortização Constante
 >   - [x] Calcular a Amortização do SAC
->   - [ ] Calcular o Saldo Atual do SAC
+>   - [x] Calcular o Saldo Atual do SAC
 >   - [x] Calcular o Juros do SAC
->   - [ ] Calcular a Prestação do SAC
+>   - [x] Calcular a Prestação do SAC
 >   - [X] Deboche do SAC
 > - [X] Calculo da tabela SPC - Sistema de Prestação Constante
 >   - [X] Calcular a Prestação do SPC
->   - [ ] Calcular o Juros do SPC
+>   - [x] Calcular o Juros do SPC
 >   - [X] Calcular a Amortização do SPC
->   - [ ] Calcular o Saldo Atual do SPC
+>   - [x] Calcular o Saldo Atual do SPC
 >   - [X] Deboche do SPC
-> - [ ] Calculo da tabela SAM - Sistema de Amortização Mista
->   - [ ] Calcular a Amortização do SAM
->   - [ ] Calcular o Saldo Atual do SAM
->   - [ ] Calcular o Juros do SAM
->   - [ ] Calcular a Prestação do SAM
+> - [x] Calculo da tabela SAM - Sistema de Amortização Mista
+>   - [x] Calcular a Amortização do SAM
+>   - [x] Calcular o Saldo Atual do SAM
+>   - [x] Calcular o Juros do SAM
+>   - [x] Calcular a Prestação do SAM
 >   - [X] Deboche do SAM
 
 ## :writing_hand: Este documento e escrito em:

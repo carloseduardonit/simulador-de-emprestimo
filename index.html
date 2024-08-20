@@ -29,19 +29,16 @@
                     </th>
                     <th>
                         <label for="html">Numero de Carência:</label><br>
-                        <input type="number" id="numeroCarencia" placeholder="Numero de Carência" value="4" />
+                        <input type="number" onmouseout="Validacao.temCarencia()" id="numeroCarencia" placeholder="Numero de Carência" value="4" />
                     </th>
-                    <!--th>
-                    <label for="html">Vai pagar Juros na carencia?</label><br>
-                    <input type="checkbox" id="vaiPagar" />
-                </th-->
+                    <th id="thTipoCarencia">                    
                     <th>
                         <label for="html">Numero de Prestação:</label><br>
                         <input type="number" id="numeroPrestacao" placeholder="Numero de Prestação" value="18" />
                     </th>
                     <th>
                         <input onclick="tabela()" type="button" value="Simule o emprestimo" />
-                        <input onclick="preencher()" type ="button" value = "teste"/>
+                       
                     </th>
                 </tr>
             </table>
