@@ -1,8 +1,11 @@
 # Simulador de Emprestimo
 
+> - URL: https://simulador-de-emprestimo-two.vercel.app/
+> - Tempo medio de Elaboração: 40 horas
+
 ## Objetivo
 
-> - Mostrar meu conhecimento em HTML,CSS, Javascripts
+> - Mostrar meu conhecimento em HTML, CSS, Javascripts
 > - Mostrar meus conhecimentos em Matematica Financeira.
 
 ## Funcionalidade
@@ -30,6 +33,7 @@
 >   - [x] Calcular o Juros do SAM
 >   - [x] Calcular a Prestação do SAM
 >   - [X] Deboche do SAM
+> - [x]Adicionado ADSENDE
 
 ## :writing_hand: Este documento e escrito em:
 
