@@ -1,4 +1,4 @@
-class Comum {
+class Comum{
     static nome;
     static saldoSAC = [];
     static saldoSPC = [];
@@ -15,10 +15,10 @@ class Comum {
             this.amortizacaoSAC[index] = amortizacao;
             this.juroSAC[index] = juro;
             this.prestacaoSAC[index] = prestacao;
-        } else if(this.getNome()==="SPC"){
-            this.saldoSPC[index] =saldoAtual;
-            this.amortizacaoSPC[index] =amortizacao;
-            this.juroSPC[index] =juro;
+        } else if (this.getNome() === "SPC") {
+            this.saldoSPC[index] = saldoAtual;
+            this.amortizacaoSPC[index] = amortizacao;
+            this.juroSPC[index] = juro;
             this.prestacaoSPC[index] = prestacao;
         }
     }
@@ -35,14 +35,20 @@ class Comum {
     static calculeValorJuros(saldoAnterior, taxaJuros) {
         return saldoAnterior * (taxaJuros / 100);
     }
-    static calculeValorSaldoCarencia(vaiPagar, saldo, taxaJuros) {
-        if (vaiPagar) {
-            return saldo;
+    static calculeValorSaldoCarencia(saldo, taxaJuros) {
+        let tipoCarencia = Validacao.valorSelecionadoTipoCarencia();
+        if (tipoCarencia === "PJ") {
+            return Number.parseFloat(saldo);
+        } else if (tipoCarencia === "JCASD") {
+            return Number.parseFloat(saldo) + Number.parseFloat(this.calculeValorJuros(saldo, taxaJuros));
+        } else {
+            return Number.parseFloat(saldo);
         }
-        return Number.parseFloat(saldo) + Number.parseFloat(calculeValorJuros(saldo, taxaJuros));
+
     }
-    static calculeValorJurosCarencia(vaiPagar, saldoAnterior, taxaJuros) {
-        if (vaiPagar) {
+    static calculeValorJurosCarencia(saldoAnterior, taxaJuros) {
+        let tipoCarencia = Validacao.valorSelecionadoTipoCarencia();
+        if (tipoCarencia === "PJ") {
             return Comum.calculeValorJuros(saldoAnterior, taxaJuros);
         }
         return 0.00;
@@ -53,14 +59,25 @@ class Comum {
     static getNome() {
         return this.nome;
     }
-    static nomeTabela(vaiPagar, numeroCarencia) {
+    static nomeTabela(numeroCarencia) {
         let texto = "";
-        if (numeroCarencia > 0) {
+        if (numeroCarencia > 0) { 
+            let tipoCarencia = Validacao.valorSelecionadoTipoCarencia();
             texto += ' com carencia de ' + numeroCarencia + ' meses';
-            if (vaiPagar) {
-                texto += " e com pagamento de juros";
-            } else {
-                texto += " com Juros Capitalizados e Acrescidos ao Saldo Devedor. ";
+            switch (tipoCarencia) {
+                case "PJ":
+                    texto += " e com Pagamento de Juros";
+                    break;
+                case "CJ":
+                    if (this.getNome() === "SAC") {
+                        texto += " e  com Capitalização de Juros";
+                        break;
+                    } else {
+                        return "Não existe tabela para modelo " + this.getNome();
+                    }
+                case "JCASD":
+                    texto += " com Juros Capitalizados e Acrescidos ao Saldo Devedor. ";
+                    break;
             }
         } else {
             texto += " sem carencia";
@@ -69,38 +86,44 @@ class Comum {
         return this.getNome() + texto;
     }
 
-    static getSaldo(index){
-        if (this.getNome()==="SAC") {
+    static getSaldo(index) {
+        if (this.getNome() === "SAC") {
             return this.saldoSAC[index];
-        } else if (this.getNome()==="SPC") {
+        } else if (this.getNome() === "SPC") {
             return this.saldoSPC[index];
         }
     }
-    static getAmortizacao(index){
-        if (this.getNome()==="SAC") {
+    static getAmortizacao(index) {
+        if (this.getNome() === "SAC") {
             return this.amortizacaoSAC[index];
-        } else if (this.getNome()==="SPC") {
+        } else if (this.getNome() === "SPC") {
             return this.amortizacaoSPC[index];
         }
     }
-    static getJuro(index){
-        if (this.getNome()==="SAC") {
+    static getJuro(index) {
+        if (this.getNome() === "SAC") {
             return this.juroSAC[index];
-        } else if (this.getNome()==="SPC") {
+        } else if (this.getNome() === "SPC") {
             return this.juroSPC[index];
         }
     }
-    static getPrestacao(index){
-        if (this.getNome()==="SAC") {
+    static getPrestacao(index) {
+        if (this.getNome() === "SAC") {
             return this.prestacaoSAC[index];
-        } else if (this.getNome()==="SPC") {
+        } else if (this.getNome() === "SPC") {
             return this.prestacaoSPC[index];
         }
     }
-    static capitalizadojuros(){
-        let juros;
-        return juros;
+    static capitalizadojuros(carencia,taxaJuros) {
+        let juros =(((1 + (taxaJuros / 100)) ** (carencia + 1))-1);
+        let element=1;
+        for (let index = 0; index<=carencia; index++) {
+            element = element *(1 +(taxaJuros / 100));
+            
+        }
+       
+        return Number.parseFloat(juros);
     }
 
-    
+
 }

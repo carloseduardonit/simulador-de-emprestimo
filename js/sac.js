@@ -10,13 +10,22 @@ class SAC extends Comum {
     static calculeValordaPrestacao(amortizacao, juros) {
         return Number.parseFloat((amortizacao + juros));
     }
+    static calculeValorJurosd(index, saldoAnterior, taxaJuros) {
+        let carencia = conveterHTMltoInt(document.getElementById('numeroCarencia'));
+        let tipoCarencia = Validacao.valorSelecionadoTipoCarencia();
+
+        if (this.getNome() === "SAC" && tipoCarencia === "CJ"&&carencia>0) {
+            return saldoAnterior * this.capitalizadojuros(carencia, taxaJuros);
+        }
+        return super.calculeValorJuros(saldoAnterior, taxaJuros);
+    }
     static deboxe() {
         let tabelaHTML = document.getElementById("tabelaSAC");
         let imagem = '<img src="https://media.tenor.com/nR9iDKkkHvMAAAAM/deboche.gif" width="400" height="400" alt="a close up of a person s face with a smiley face on their head ." loading="lazy">';
         tabelaHTML.innerHTML = imagem;
     }
 
-    static tabela(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML) {
+    static tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML) {
         this.setNome("SAC");
         let tabelaHTML = document.getElementById('tabelaSAC');
         // Manipular dados
@@ -35,33 +44,22 @@ class SAC extends Comum {
         let totalJuros = 0.00;
         let totalPrestacao = 0.00;
         let saldoAtual, saldoAnterior;
-
-        let texto = cabelho(SAC.nomeTabela(vaiPagar, carencia))
+        SAC.alimentarArray(0, saldo, amortizacao, juros, prestacao);
+        let texto = cabelho(SAC.nomeTabela(carencia))
             + alimentarTabela(mes, saldo, amortizacao, juros, prestacao);
 
         if (carencia > 0) {
-            switch (Validacao.valorSelecionadoTipoCarencia()) {
-                case "PJ":
-                    juros = SAC.calculeValorJurosCarencia(vaiPagar, saldo, taxaJuros);
-                    break;
-                case "CJ":
-                    break;
-                case "JCASD":
-                    break;
-                default:
-                    break;
-            }
-            
-            saldoAtual = SAC.calculeValorSaldoCarencia(vaiPagar, saldo, taxaJuros);
+            juros = SAC.calculeValorJurosCarencia(saldo, taxaJuros);
+            saldoAtual = SAC.calculeValorSaldoCarencia(saldo, taxaJuros);
             saldoAnterior = saldoAtual;
             for (var index = mes + 1; index <= carencia; index++) {
                 mes = index;
                 prestacao = SAC.calculeValordaPrestacao(amortizacao, juros);
                 SAC.alimentarArray(index, saldoAtual, amortizacao, juros, prestacao);
                 texto += alimentarTabela(mes, saldoAtual, amortizacao, juros, prestacao);
-                juros = SAC.calculeValorJurosCarencia(vaiPagar, saldoAnterior, taxaJuros);
+                juros = SAC.calculeValorJurosCarencia(saldoAnterior, taxaJuros);
                 saldoAnterior = saldoAtual;
-                saldoAtual = SAC.calculeValorSaldoCarencia(vaiPagar, saldoAnterior, taxaJuros);
+                saldoAtual = SAC.calculeValorSaldoCarencia(saldoAnterior, taxaJuros);
                 totalAmortizacao += amortizacao;
                 totalJuros += juros;
                 totalPrestacao += prestacao;
@@ -72,11 +70,15 @@ class SAC extends Comum {
         }
 
         if (numberPrestacao > 0) {
-            amortizacao = SAC.calculeValorAmotização(numberPrestacao, saldoAtual);
-            saldoAnterior = saldoAtual;
+            saldoAnterior = SAC.getSaldo(carencia);
+            amortizacao = SAC.calculeValorAmotização(numberPrestacao, saldoAnterior);
             saldoAtual = saldoAnterior - amortizacao;
+            if (carencia > 0) {
+                juros = SAC.calculeValorJurosd(carencia + 1, saldoAnterior, taxaJuros);
+            } else {
+                juros = super.calculeValorJuros(saldoAnterior, taxaJuros);
+            }
 
-            juros = SAC.calculeValorJuros(saldo, taxaJuros);
             for (var index = (carencia + 1); index <= (carencia + numberPrestacao); index++) {
                 mes = index;
                 prestacao = SAC.calculeValordaPrestacao(amortizacao, juros);

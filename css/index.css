@@ -9,6 +9,9 @@
     padding: 10px;
     border: 10px;
 }
+p{
+    background-color: white;
+}
 img{
     width: "200";
     height: "200";

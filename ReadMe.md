@@ -33,7 +33,7 @@
 >   - [x] Calcular o Juros do SAM
 >   - [x] Calcular a Prestação do SAM
 >   - [X] Deboche do SAM
-> - [x]Adicionado ADSENDE
+> - [x] Adicionado ADSENDE
 
 ## :writing_hand: Este documento e escrito em:
 

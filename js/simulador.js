@@ -1,13 +1,4 @@
-function preencher() {
-    let valorEmprestimoHTML = conveterHTMltoFloat(document.getElementById('valorEmprestimo'));
-    let taxaJurosHTML = conveterHTMltoFloat(document.getElementById('taxaJuros'));
-    let numeroCarenciaHTML = conveterHTMltoInt(document.getElementById('numeroCarencia'));
-    let numeroPrestacaoHTML = conveterHTMltoInt(document.getElementById('numeroPrestacao'));
-    valorEmprestimoHTML.innerHTML = 430000;
-    taxaJurosHTML.innerHTML = 9.7;
-    numeroCarenciaHTML.innerHTML = 2;
-    numeroPrestacaoHTML.innerHTML = 18;
-}
+
 function formatarValor(valor) {
     if (isNaN(valor)) {
         return valor;
@@ -49,10 +40,10 @@ function tabela() {
     let taxaJurosHTML = conveterHTMltoFloat(document.getElementById('taxaJuros'));
     let numeroCarenciaHTML = conveterHTMltoInt(document.getElementById('numeroCarencia'));
     let numeroPrestacaoHTML = conveterHTMltoInt(document.getElementById('numeroPrestacao'));
-    let vaiPagar = true;
-    if (Validacao.erroPreenchimento(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML)) {
-        SAC.tabela(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
-        SPC.tabela(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
-        SAM.tabela(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
+
+    if (Validacao.erroPreenchimento(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML)) {
+        SAC.tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
+        SPC.tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
+        SAM.tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
     }
 }

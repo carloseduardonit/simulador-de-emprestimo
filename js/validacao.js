@@ -1,12 +1,31 @@
 class Validacao {
+
     constructor() {
 
     }
-    static valorSelecionadoTipoCarencia(){
-        let valor = document.getElementById('tipoCarencia').value;
-        return valor;
-    }
+    static valorSelecionadoTipoCarencia() {
+        let tipoCarenciaHTML = document.getElementById('tipoCarencia');
+        let carencia = conveterHTMltoInt(document.getElementById('numeroCarencia'));
+        if (tipoCarenciaHTML === null && carencia > 0) {
+            this.temCarencia()
+            return this.valorSelecionadoTipoCarencia();
+        }
 
+        return tipoCarenciaHTML.value;
+    }
+    static nãoExibirTabela(carencia, nome) {
+        if (carencia > 0) {
+            let tipoCarencia = Validacao.valorSelecionadoTipoCarencia();
+            if (tipoCarencia === "CJ")
+                switch (nome) {
+                    case "SPC":
+                    case "SAM":
+                        return true;
+                    default:
+                        return false;
+                }
+        } return false;
+    }
     static temCarencia() {
         let TDHMTL = document.getElementById('thTipoCarencia');
         let carencia = conveterHTMltoInt(document.getElementById('numeroCarencia'));
@@ -21,13 +40,13 @@ class Validacao {
         } else {
             texto = "";
         }
-       TDHMTL.innerHTML = texto;
+        TDHMTL.innerHTML = texto;
 
     }
     static notUndefined(value) {
         return value != undefined;
     }
-    static erroPreenchimento(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML) {
+    static erroPreenchimento(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML) {
         let cont = 0, texto = "";
 
         if (isNaN(valorEmprestimoHTML)) {

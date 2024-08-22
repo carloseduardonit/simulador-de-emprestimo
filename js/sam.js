@@ -23,7 +23,7 @@ class SAM extends Comum {
         tabelaHTML.innerHTML = imagem;
     }
 
-    static tabela(vaiPagar, valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML) {
+    static tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML) {
         // hTML
         this.setNome("SAM");
         let tabelaHTML = document.getElementById('tabelaSAM');
@@ -43,11 +43,13 @@ class SAM extends Comum {
         let totalJuros = 0.00;
         let totalPrestacao = 0.00;
         let saldoAtual, saldoAnterior;
-        let texto = cabelho(SAM.nomeTabela(vaiPagar, carencia))
+        let texto;
+        if (Validacao.nãoExibirTabela(carencia,SAM.getNome())) {
+            texto = "<p>" + SAM.nomeTabela(carencia) + "</p>";
+            tabelaHTML.innerHTML = texto;
+        } else {
+        texto = cabelho(SAM.nomeTabela(carencia))
             + alimentarTabela(mes, saldo, amortizacao, juros, prestacao);
-
-
-
 
         if (numberPrestacao > 0) {
             juros = SAM.calculeValorJuros(saldoAnterior, taxaJuros);
@@ -67,4 +69,5 @@ class SAM extends Comum {
         texto += linhaTotal(totalAmortizacao, totalJuros, totalPrestacao, taxaJuros)
         tabelaHTML.innerHTML = texto;
     }
+}
 }
