@@ -8,6 +8,10 @@
 > - Mostrar meu conhecimento em HTML, CSS, Javascripts
 > - Mostrar meus conhecimentos em Matematica Financeira.
 
+## Bugs
+
+- [ ] evento  OnMouseeEnd  do Campo
+
 ## Funcionalidade
 
 > - [ ] Função Basica
@@ -30,6 +34,11 @@
 >   - [x] Calcular o Juros do SAC
 >   - [x] Calcular a Prestação do SAC
 >   - [X] Deboche do SAC
+
+|SPC sem carência|SPC com Carência e Pagamento dos Juros|SPC com Carência e Capitalização dos Juros|
+|--|--|--|
+|![SPC sem carência](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SPC/SPC%20sem%20car%C3%AAncia.png)|![SPC com Carência e Pagamento dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SPC/SPC%20com%20Car%C3%AAncia%204%20meses%20e%20Pagamento%20dos%20Juros.png)|![SPC com Carência e Capitalização dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SPC/SPC%20com%20Car%C3%AAncia%204%20meses%20e%20Capitaliza%C3%A7%C3%A3o%20dos%20Juros.png)|
+
 > - [X] Calculo da tabela SPC - Sistema de Prestação Constante
 >   - [X] Calcular a Prestação do SPC
 >   - [x] Calcular o Juros do SPC
