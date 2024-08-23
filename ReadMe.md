@@ -15,6 +15,11 @@
 >   - [X] Cabeçalho da Tabelas
 >   - [X] Rodape da Tabelas
 >   - [ ] ...
+
+|SAC sem carência|SAC com Carência  e Pagamento dos Juros|
+|--|--|
+|![Sac se Carenca](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/master/image/SAC/SAC%20sem%20Carencia.png)|![SAC com Carência e Pagamento dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/master/image/SAC/SAC%20com%20Car%C3%AAncia%204%20meses%20e%20Pagamento%20dos%20Juros.png)|
+
 > - [X] Calculo da tabela SAC - Sistema de Amortização Constante
 >   - [x] Calcular a Amortização do SAC
 >   - [x] Calcular o Saldo Atual do SAC
@@ -27,6 +32,7 @@
 >   - [X] Calcular a Amortização do SPC
 >   - [x] Calcular o Saldo Atual do SPC
 >   - [X] Deboche do SPC
+
 > - [x] Calculo da tabela SAM - Sistema de Amortização Mista
 >   - [x] Calcular a Amortização do SAM
 >   - [x] Calcular o Saldo Atual do SAM
