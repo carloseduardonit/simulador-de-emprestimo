@@ -1,16 +1,20 @@
 # Simulador de Emprestimo
 
 > - URL: https://simulador-de-emprestimo-two.vercel.app/
-> - Tempo medio de Elaboração: 40 horas
+> - Tempo medio de Elaboração: 40 horas :hourglass_flowing_sand:
+
+![ver](https://imgur.com/884malT.gif)
 
 ## Objetivo
 
 > - Mostrar meu conhecimento em HTML, CSS, Javascripts
 > - Mostrar meus conhecimentos em Matematica Financeira.
 
-## Bugs
+## Bugs :lady_beetle:
 
-- [ ] evento  OnMouseeEnd  do Campo
+- [ ] evento OnMouseEnd do Campo [Numero de Carencia], criar um loop infinito no sistema
+- [ ] evento onMouseEnd nas tabelas, caso os campos não seja informado, criar um loop infinito no sistema.
+- [ ] os calculos está com mais de 4 casas decimais;
 
 ## Funcionalidade
 
@@ -46,6 +50,11 @@
 >   - [x] Calcular o Saldo Atual do SPC
 >   - [X] Deboche do SPC
 
+
+|SAM sem carência|SAM com Carência e Pagamento dos Juros|SAM com Carência e Capitalização dos Juros|
+|--|--|--|
+|![SAM sem carência](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SAM/SPC%20sem%20car%C3%AAncia.png)|![SAM com Carência e Pagamento dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SAM/SPC%20com%20Car%C3%AAncia%204%20meses%20e%20Pagamento%20dos%20Juros.png)|![SAM com Carência e Capitalização dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SAM/SPC%20com%20Car%C3%AAncia%204%20meses%20e%20Capitaliza%C3%A7%C3%A3o%20dos%20Juros.png)|
+
 > - [x] Calculo da tabela SAM - Sistema de Amortização Mista
 >   - [x] Calcular a Amortização do SAM
 >   - [x] Calcular o Saldo Atual do SAM
@@ -74,5 +83,7 @@
 ## Material  de Suporte:
 
 - [Iconografia](https://github.com/ikatyang/emoji-cheat-sheet/tree/master?tab=readme-ov-file#activities)
+- [Badges](https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/utils/badges/badges.md)
+- [Cards](https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/utils/cards/github-stats.md)
 - [Sintaxe básica de gravação e formatação no GitHub](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - [Trabalhar com formatação avançadano GitHub](https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting)
