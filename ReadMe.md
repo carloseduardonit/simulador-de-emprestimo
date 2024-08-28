@@ -1,6 +1,6 @@
 # Simulador de Emprestimo
 
-> - URL: https://simulador-de-emprestimo-two.vercel.app/
+> - URL: [Acesse Aqui](https://simulador-de-emprestimo-two.vercel.app/)
 > - Tempo medio de Elaboração: 40 horas :hourglass_flowing_sand:
 
 ![ver](https://imgur.com/884malT.gif)
@@ -8,13 +8,19 @@
 ## Objetivo
 
 > - Mostrar meu conhecimento em HTML, CSS, Javascripts
+>   - Utilzação  de Eventos
+>   - U
 > - Mostrar meus conhecimentos em Matematica Financeira.
+>   - Calcular das prestações do tipo de amortização SPC pela formula
+
+$$ \text{PMT} = \frac{\text{PV}}{\left(\frac{1 - (1 + i)^{-n}}{i}\right)}
+$$
 
 ## Bugs :lady_beetle:
 
-- [ ] evento OnMouseEnd do Campo [Numero de Carencia], criar um loop infinito no sistema
-- [ ] evento onMouseEnd nas tabelas, caso os campos não seja informado, criar um loop infinito no sistema.
-- [ ] os calculos está com mais de 4 casas decimais;
+- [ ] Evento OnMouseEnd do Campo [Numero de Carencia], criar um loop infinito no sistema
+- [ ] Evento onMouseEnd nas tabelas, caso os campos não seja informado, criar um loop infinito no sistema.
+- [ ] Os calculos está com mais de 4 casas decimais;
 
 ## Funcionalidade
 
@@ -50,10 +56,9 @@
 >   - [x] Calcular o Saldo Atual do SPC
 >   - [X] Deboche do SPC
 
-
 |SAM sem carência|SAM com Carência e Pagamento dos Juros|SAM com Carência e Capitalização dos Juros|
 |--|--|--|
-|![SAM sem carência](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SAM/SPC%20sem%20car%C3%AAncia.png)|![SAM com Carência e Pagamento dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SAM/SPC%20com%20Car%C3%AAncia%204%20meses%20e%20Pagamento%20dos%20Juros.png)|![SAM com Carência e Capitalização dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SAM/SPC%20com%20Car%C3%AAncia%204%20meses%20e%20Capitaliza%C3%A7%C3%A3o%20dos%20Juros.png)|
+|![SAM sem carência](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/afecb71486ed0aa78f822cfe2d72fabd283dd878/image/SAM/SAM%20sem%20carencia.png)|![SAM com Carência e Pagamento dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SAM/SPC%20com%20Car%C3%AAncia%204%20meses%20e%20Pagamento%20dos%20Juros.png)|![SAM com Carência e Capitalização dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SAM/SPC%20com%20Car%C3%AAncia%204%20meses%20e%20Capitaliza%C3%A7%C3%A3o%20dos%20Juros.png)|
 
 > - [x] Calculo da tabela SAM - Sistema de Amortização Mista
 >   - [x] Calcular a Amortização do SAM
@@ -63,28 +68,28 @@
 >   - [X] Deboche do SAM
 > - [x] Adicionado ADSENDE
 
-## :writing_hand: Linguagens utilizadas:
+## :writing_hand: Linguagens utilizadas
 
 >![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-## :writing_hand:  Este documento e escrito em:
+## :writing_hand:  Este documento e escrito em
 
 > ![Markdown](https://img.shields.io/badge/Markdown-000?style=for-the-badge&logo=markdown)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-## Acesse minhas redes ou entre contato:
+## Acesse minhas redes ou entre contato
 
 > [![Telegram](https://img.shields.io/badge/Telegram-000?style=for-the-badge&logo=telegram&logoColor=2CA5E0)](https://t.me/Carlaol)[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carlos-eduardo-dos-s-figueiredo/)[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/carloseduardonit)[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5521985745077)[![Gmail](https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red)](mailto:carlostecnicowl+github@gmail.com)
 
 ## :coffee: Colabore para o cafezinho :coffee:
 
-<img src="https://github.com/carloseduardonit/conector-do-carlos/blob/bbacf217c11df84b7826304709271bf0d854d1ee/Qr%20PIX.jpg" width="200">
+![PIX]("https://github.com/carloseduardonit/conector-do-carlos/blob/bbacf217c11df84b7826304709271bf0d854d1ee/Qr%20PIX.jpg){width="200"}
 
 > [!NOTE]
-> "A empatia é certamente um dos mais nobres sentimentos humanos. 
->  Para entender e ajudar o próximo é necessário se imaginar na condição dele."
+> "A empatia é certamente um dos mais nobres sentimentos humanos.
+> Para entender e ajudar o próximo é necessário se imaginar na condição dele."
 [Lázaro de Souza Gomes](https://www.pensador.com/autor/lazaro_de_souza_gomes/)
 
-## Material  de Suporte:
+## Material de Suporte
 
 - [Iconografia](https://github.com/ikatyang/emoji-cheat-sheet/tree/master?tab=readme-ov-file#activities)
 - [Badges](https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/utils/badges/badges.md)
