@@ -3,7 +3,7 @@
 > - URL: [Acesse Aqui](https://simulador-de-emprestimo-two.vercel.app/)
 > - Tempo medio de Elaboração: 40 horas :hourglass_flowing_sand:
 
-<img src = "https://imgur.com/884malT.gif" width 300/>
+<img src = "https://imgur.com/884malT.gif" width ="300"/>
 
 ## Objetivo
 
