@@ -1,7 +1,7 @@
 # Simulador de Emprestimo
 
 > - URL: [Acesse Aqui](https://simulador-de-emprestimo-two.vercel.app/)
-> - Tempo medio de Elaboração: 40 horas :hourglass_flowing_sand:
+> - Tempo medio de Elaboração: 50 horas :hourglass_flowing_sand:
 
 <img src = "https://github.com/carloseduardonit/simulador-de-emprestimo/blob/master/image/884malT%20-%20Imgur.gif" width ="700"/>
 
@@ -9,7 +9,8 @@
 
 > - Mostrar meu conhecimento em HTML, CSS, Javascripts
 >   - Utilzação  de Eventos
->   - U
+>   - Maniipulação  de Matriz
+>   - Orientação a Objetos
 > - Mostrar meus conhecimentos em Matematica Financeira.
 >   - Calcular das prestações do tipo de amortização SPC pela formula
 
@@ -21,6 +22,9 @@ $$
 - [ ] Evento OnMouseEnd do Campo [Numero de Carencia], criar um loop infinito no sistema
 - [ ] Evento onMouseEnd nas tabelas, caso os campos não seja informado, criar um loop infinito no sistema.
 - [ ] Os calculos está com precisão de mais de 4 casas decimais;
+- [ ] Não utiliizei SOLID
+- [ ] Não utilizei Clean Code em toda Classes, Metodos e Variaveis
+
 
 ## Funcionalidade
 
