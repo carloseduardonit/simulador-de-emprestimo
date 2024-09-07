@@ -14,7 +14,7 @@
 > - Mostrar meus conhecimentos em Matematica Financeira.
 >   - Calcular das prestações do tipo de amortização SPC pela formula
 
-$$ \text{PMT} = \frac{\text{PV}}{\left(\frac{1 - (1 + i)^{-n}}{i}\right)}
+$$ \text{PMT} = \frac{\text{PV}}{ \left(\frac{1 - (1 + i)^{-n}}{i}\right)}
 $$
 
 ## Bugs :lady_beetle:
