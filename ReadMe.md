@@ -3,7 +3,7 @@
 > - URL: [Acesse Aqui](https://simulador-de-emprestimo-two.vercel.app/)
 > - Tempo medio de Elaboração: 50 horas :hourglass_flowing_sand:
 
-<img src = "https://github.com/carloseduardonit/simulador-de-emprestimo/blob/master/image/884malT%20-%20Imgur.gif" width ="700"/>
+<img src = "https://github.com/carloseduardonit/simulador-de-emprestimo/blob/master/image/884malT%20-%20Imgur.gif" width ="700" alt ="gf"/>
 
 ## Objetivo
 
@@ -24,7 +24,6 @@ $$
 - [ ] Os calculos está com precisão de mais de 4 casas decimais;
 - [ ] Não utiliizei SOLID
 - [ ] Não utilizei Clean Code em toda Classes, Metodos e Variaveis
-
 
 ## Funcionalidade
 

@@ -12,8 +12,9 @@ function conveterHTMltoInt(valor) {
     return Number.parseInt(valor.value);
 }
 function alimentarTabela(mes, saldo, amortizacao, juros, prestacao) {
-    let = texto = '<tr>' +
-        '<th>' + mes + '</th>' +
+    let carencia = conveterHTMltoInt(document.getElementById('numeroCarencia'));
+    let texto = '<tr>' +
+        '<th '+ecarencia(mes,carencia)+'>' + mes + '</th>' +
         '<th>' + formatarValor(saldo) + '</th>' +
         '<th>' + formatarValor(amortizacao) + '</th>' +
         '<th>' + formatarValor(juros) + '</th>' +
@@ -22,7 +23,7 @@ function alimentarTabela(mes, saldo, amortizacao, juros, prestacao) {
     return texto;
 }
 function cabelho(nome) {
-    return '<table border="1" >' + '<tr><td colspan ="5">' + nome + '</td></tr>'
+    return '<table border="1" class = "simulacao" >' + '<tr><td colspan ="5">' + nome + '</td></tr>'
         + alimentarTabela('Mês', 'Saldo', 'Amortização', 'Juros', 'Prestação');
 }
 function linhaTotal(totalAmortizacao, totalJuros, totalPrestacao, taxaJuros) {
@@ -46,4 +47,17 @@ function tabela() {
         SPC.tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
         SAM.tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
     }
+    
+}
+
+function ecarencia(mes, numeroCarencia) {
+    if (mes === 0 || mes=== "Mês") {
+        return "";
+    }
+    if (mes <= numeroCarencia) {
+        return 'class = "thCarencia"';
+    } else {
+        return 'class = "thPrestacao"';
+    }
+
 }

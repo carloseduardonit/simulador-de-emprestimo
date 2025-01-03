@@ -1,4 +1,4 @@
-class Comum{
+class Comum {
     static nome;
     static saldoSAC = [];
     static saldoSPC = [];
@@ -61,7 +61,7 @@ class Comum{
     }
     static nomeTabela(numeroCarencia) {
         let texto = "";
-        if (numeroCarencia > 0) { 
+        if (numeroCarencia > 0) {
             let tipoCarencia = Validacao.valorSelecionadoTipoCarencia();
             texto += ' com carencia de ' + numeroCarencia + ' meses';
             switch (tipoCarencia) {
@@ -114,16 +114,14 @@ class Comum{
             return this.prestacaoSPC[index];
         }
     }
-    static capitalizadojuros(carencia,taxaJuros) {
-        let juros =(((1 + (taxaJuros / 100)) ** (carencia + 1))-1);
-        let element=1;
-        for (let index = 0; index<=carencia; index++) {
-            element = element *(1 +(taxaJuros / 100));
-            
+    static capitalizadojuros(carencia, taxaJuros) {
+        let juros = (((1 + (taxaJuros / 100)) ** (carencia + 1)) - 1);
+        let element = 1;
+        for (let index = 0; index <= carencia; index++) {
+            element = element * (1 + (taxaJuros / 100));
+
         }
-       
+
         return Number.parseFloat(juros);
     }
-
-
 }
