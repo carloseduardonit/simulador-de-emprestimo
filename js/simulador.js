@@ -31,8 +31,8 @@ function linhaTotal(totalAmortizacao, totalJuros, totalPrestacao, taxaJuros) {
         + formatarValor(totalAmortizacao) + '</th><th>'
         + formatarValor(totalJuros) + '</th><th>'
         + formatarValor(totalPrestacao) + '</th></tr>'
-        + '<tr><th colspan = "3"></th><th colspan = "2">'
-        + taxaJuros + ' % ao mês</th></tr>'
+        + '<tr><th class = "preto" colspan = "3"></th><th colspan = "2">'
+        + formatarTaxa(taxaJuros) + ' ao mês</th></tr>'
         + '</table>';
 }
 
@@ -50,6 +50,13 @@ function tabela() {
     
 }
 
+
+function formatarTaxa(taxa) {
+    if (isNaN(taxa)) {
+        return taxa;
+    }
+    return Number.parseFloat(taxa/100).toLocaleString('pt-BR', { style: 'percent', minimumFractionDigits: 4 });
+}
 function ecarencia(mes, numeroCarencia) {
     if (mes === 0 || mes=== "Mês") {
         return "";
@@ -59,5 +66,4 @@ function ecarencia(mes, numeroCarencia) {
     } else {
         return 'class = "thPrestacao"';
     }
-
 }

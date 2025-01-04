@@ -1,7 +1,12 @@
 * {
     box-sizing: border-box;
 }
-
+th.preto{
+    background-color: black;
+    border: black;
+    border-bottom-width: 0px; 
+    border-left-width: 0px;
+}
 .formulario {
     display: flex;
     justify-items: center;
@@ -40,12 +45,6 @@ th.thPrestacao{
     font-size: 14px;
     font-weight: bold;
     padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.tabelaSPC {
-
-    text-decoration: #8f2121;
 }
 
 .coluna {
