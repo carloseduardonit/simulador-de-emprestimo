@@ -69,13 +69,13 @@ function cabelho(nome) {
 
 
 /**
- * Generates a table row with the total amortization, total interest, total payment, and interest rate.
+ * Gera uma linha de tabela com a amortização total, juros totais, pagamento total e taxa de juros.
  *
- * @param {number} totalAmortizacao - The total amortization amount.
- * @param {number} totalJuros - The total interest amount.
- * @param {number} totalPrestacao - The total payment amount.
- * @param {number} taxaJuros - The interest rate per month.
- * @returns {string} The HTML string representing the table row with the totals and interest rate.
+ * @param {number} totalAmortizacao - O valor total da amortização.
+ * @param {number} totalJuros - O valor total dos juros.
+ * @param {number} totalPrestacao - O valor total do pagamento.
+ * @param {number} taxaJuros - A taxa de juros por mês.
+ * @returns {string} A string HTML representando a linha da tabela com os totais e a taxa de juros.
  */
 function linhaTotal(totalAmortizacao, totalJuros, totalPrestacao, taxaJuros) {
     return '<tr><th colspan = "2">Total</th><th>'
