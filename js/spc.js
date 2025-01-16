@@ -1,9 +1,20 @@
 class SPC extends Comum {
+    /**
+     * Cria uma instância da classe.
+     * Chama o construtor da classe pai.
+     */
     constructor() {
         super();
     }
 
-
+    /**
+     * Calcula o valor da prestação de um empréstimo.
+     *
+     * @param {number} saldo - O saldo restante do empréstimo.
+     * @param {number} taxaJuros - A taxa de juros como porcentagem.
+     * @param {number} numberPrestacao - O número de prestações.
+     * @returns {number} O valor de cada prestação.
+     */
     static calculeValordaPrestacao(saldo, taxaJuros, numberPrestacao) {
         let juros = taxaJuros / 100;
         let fatorValorPresente = (((1 - (1 + juros) ** (-numberPrestacao))) / juros);
@@ -11,17 +22,37 @@ class SPC extends Comum {
     }
 
 
+    /**
+     * Calcula o valor da amortização.
+     *
+     * @param {number} prestacao - O valor total da prestação.
+     * @param {number} juros - A parte de juros da prestação.
+     * @returns {number} O valor da amortização, que é o valor da prestação menos os juros.
+     */
     static calculeValorAmotização(prestacao, juros) {
         return Number.parseFloat((prestacao - juros));
     }
 
 
+    /**
+     * Substitui o conteúdo HTML interno do elemento com id "tabelaSPC" por uma imagem.
+     * A imagem é de uma menina com uma coroa na cabeça comendo um doce.
+     * A imagem tem uma largura de 400px, altura de 400px e uma largura máxima de 833px.
+     */
     static deboxe() {
         let tabelaHTML = document.getElementById("tabelaSPC");
         let imagem = '<img src="https://media1.tenor.com/m/2mHG39xCnssAAAAC/carinha-de-anjo-cda.gif" width="400" height="400" alt="a little girl with a crown on her head is eating a candy" style="max-width: 833px;">';
         tabelaHTML.innerHTML = imagem;
     }
 
+    /**
+     * Gera e exibe uma tabela de amortização de empréstimo.
+     *
+     * @param {number} valorEmprestimoHTML - O valor do empréstimo.
+     * @param {number} taxaJurosHTML - A taxa de juros.
+     * @param {number} numeroCarenciaHTML - O número de períodos de carência.
+     * @param {number} numeroPrestacaoHTML - O número de prestações.
+     */
     static tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML) {
         // hTML
         SPC.setNome("SPC");
