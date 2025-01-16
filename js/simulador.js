@@ -97,8 +97,8 @@ function linhaTotal(totalAmortizacao, totalJuros, totalPrestacao, taxaJuros) {
 function tabela() {
     let valorEmprestimoHTML = converterHTMLtoFloat(document.getElementById('valorEmprestimo'));
     let taxaJurosHTML = converterHTMLtoFloat(document.getElementById('taxaJuros'));
-    let numeroCarenciaHTML = r(document.getElementById('numeroCarencia'));
-    let numeroPrestacaoHTML = r(document.getElementById('numeroPrestacao'));
+    let numeroCarenciaHTML = converterHTMLtoInt(document.getElementById('numeroCarencia'));
+    let numeroPrestacaoHTML = converterHTMLtoInt(document.getElementById('numeroPrestacao'));
     if (Validacao.erroPreenchimento(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML)) {
         SAC.tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
         SPC.tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
