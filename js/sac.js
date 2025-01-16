@@ -1,5 +1,9 @@
 class SAC extends Comum {
     nome = "SAC";
+    /**
+     * Cria uma instância da classe.
+     * Chama o construtor da classe pai.
+     */
     constructor() {
         super();
     }
@@ -11,7 +15,7 @@ class SAC extends Comum {
         return Number.parseFloat((amortizacao + juros));
     }
     static calculeValorJurosd(index, saldoAnterior, taxaJuros) {
-        let carencia = conveterHTMltoInt(document.getElementById('numeroCarencia'));
+        let carencia = converterHTMLtoInt(document.getElementById('numeroCarencia'));
         let tipoCarencia = Validacao.valorSelecionadoTipoCarencia();
 
         if (this.getNome() === "SAC" && tipoCarencia === "CJ"&&carencia>0) {

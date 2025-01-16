@@ -1,14 +1,41 @@
 class SAM extends Comum {
-
+/**
+     * Cria uma instância da classe.
+     * Chama o construtor da classe pai.
+     */
     constructor() {
         super();
     }
+    
+    /**
+     * Calcula o valor do saldo atual com base nas prestações SAC e SPC.
+     *
+     * @param {number} prestacaoSAC - O valor da prestação SAC.
+     * @param {number} prestacaoSPC - O valor da prestação SPC.
+     * @returns {number} O valor calculado do saldo atual.
+     */
     static calculeValorSaldoAtual(prestacaoSAC, prestacaoSPC) {
         return this.media(prestacaoSAC, prestacaoSPC);
     }
+
+    /**
+     * Calcula o valor dos juros com base nas prestações SAC e SPC.
+     *
+     * @param {number} prestacaoSAC - O valor da prestação SAC.
+     * @param {number} prestacaoSPC - O valor da prestação SPC.
+     * @returns {number} O valor calculado dos juros.
+     */
     static calculeValorJuros(prestacaoSAC, prestacaoSPC) {
         return this.media(prestacaoSAC, prestacaoSPC);
     }
+
+    /**
+     * Calcula o valor da amortização com base nas prestações SAC e SPC.
+     *
+     * @param {number} prestacaoSAC - O valor da prestação SAC.
+     * @param {number} prestacaoSPC - O valor da prestação SPC.
+     * @returns {number} O valor calculado da amortização.
+     */
     static calculeValorAmotização(prestacaoSAC, prestacaoSPC) {
         return this.media(prestacaoSAC, prestacaoSPC);
     }

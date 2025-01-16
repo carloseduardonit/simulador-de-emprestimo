@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
 }
+
+
 th.preto{
     background-color: black;
     border: black;
@@ -14,8 +16,14 @@ th.preto{
     padding: 10px;
     border: 10px;
 }
-p{
-    background-color: white;
+td.preto{
+    background-color: black;
+    border-top-width: 0px;
+}
+pre{
+    color: white;
+    font-size: 14px;
+    width: 50%;
 }
 img{
     width: "200";
@@ -60,6 +68,7 @@ th.thPrestacao{
 
 .linha:after {
     align-items: center;
+    height: auto;
     content: "";
     display: table-column-group;
     clear: both;

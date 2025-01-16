@@ -20,7 +20,7 @@ function formatarValor(valor) {
  * @param {HTMLInputElement} valor - O elemento de entrada HTML cujo valor será convertido.
  * @returns {number} A representação numérica de ponto flutuante do valor de entrada.
  */
-function conveterHTMltoFloat(valor) {
+function converterHTMLtoFloat(valor) {
     return Number.parseFloat(valor.value);
 }
 
@@ -30,7 +30,7 @@ function conveterHTMltoFloat(valor) {
  * @param {HTMLInputElement} valor - O elemento de entrada HTML cujo valor será convertido.
  * @returns {number} A representação numérica inteira do valor de entrada.
  */
-function conveterHTMltoInt(valor) {
+function converterHTMLtoInt(valor) {
     return Number.parseInt(valor.value);
 }
 
@@ -45,7 +45,7 @@ function conveterHTMltoInt(valor) {
  * @returns {string} - A linha de tabela HTML gerada.
  */
 function alimentarTabela(mes, saldo, amortizacao, juros, prestacao) {
-    let carencia = conveterHTMltoInt(document.getElementById('numeroCarencia'));
+    let carencia = converterHTMLtoInt(document.getElementById('numeroCarencia'));
     let texto = '<tr>' +
         '<th '+ecarencia(mes,carencia)+'>' + mes + '</th>' +
         '<th>' + formatarValor(saldo) + '</th>' +
@@ -95,19 +95,16 @@ function linhaTotal(totalAmortizacao, totalJuros, totalPrestacao, taxaJuros) {
  * @function tabela
  */
 function tabela() {
-    let valorEmprestimoHTML = conveterHTMltoFloat(document.getElementById('valorEmprestimo'));
-    let taxaJurosHTML = conveterHTMltoFloat(document.getElementById('taxaJuros'));
-    let numeroCarenciaHTML = conveterHTMltoInt(document.getElementById('numeroCarencia'));
-    let numeroPrestacaoHTML = conveterHTMltoInt(document.getElementById('numeroPrestacao'));
-
+    let valorEmprestimoHTML = converterHTMLtoFloat(document.getElementById('valorEmprestimo'));
+    let taxaJurosHTML = converterHTMLtoFloat(document.getElementById('taxaJuros'));
+    let numeroCarenciaHTML = r(document.getElementById('numeroCarencia'));
+    let numeroPrestacaoHTML = r(document.getElementById('numeroPrestacao'));
     if (Validacao.erroPreenchimento(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML)) {
         SAC.tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
         SPC.tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
         SAM.tabela(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML);
     }
-    
 }
-
 
 /**
  * Formata uma taxa de imposto dada como uma string de porcentagem.

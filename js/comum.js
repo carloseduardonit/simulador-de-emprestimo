@@ -107,6 +107,13 @@ class Comum {
             return this.juroSPC[index];
         }
     }
+    
+    /**
+     * Recupera a prestação do empréstimo com base no índice fornecido.
+     * 
+     * @param {number} index - O índice da prestação a ser recuperada.
+     * @returns {number} O valor da prestação no índice especificado.
+     */
     static getPrestacao(index) {
         if (this.getNome() === "SAC") {
             return this.prestacaoSAC[index];
@@ -114,6 +121,14 @@ class Comum {
             return this.prestacaoSPC[index];
         }
     }
+
+    /**
+     * Calcula os juros capitalizados durante um determinado período com uma taxa de juros especificada.
+     *
+     * @param {number} carencia - O número de períodos (por exemplo, meses ou anos) para os quais os juros são calculados.
+     * @param {number} taxaJuros - A taxa de juros como uma porcentagem.
+     * @returns {number} - Os juros capitalizados calculados.
+     */
     static capitalizadojuros(carencia, taxaJuros) {
         let juros = (((1 + (taxaJuros / 100)) ** (carencia + 1)) - 1);
         let element = 1;
@@ -121,7 +136,6 @@ class Comum {
             element = element * (1 + (taxaJuros / 100));
 
         }
-
         return Number.parseFloat(juros);
     }
 }
