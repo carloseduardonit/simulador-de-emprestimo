@@ -38,7 +38,7 @@ class SAC extends Comum {
      * @param {number} taxaJuros - A taxa de juros aplicada.
      * @returns {number} O valor dos juros calculados.
      */
-    static calculeValorJuros(index, saldoAnterior, taxaJuros) {
+    static calculeValorJurosd(index, saldoAnterior, taxaJuros) {
         let carencia = converterHTMLtoInt(document.getElementById('numeroCarencia'));
         let tipoCarencia = Validacao.valorSelecionadoTipoCarencia();
 
