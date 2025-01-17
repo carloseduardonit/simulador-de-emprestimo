@@ -26,14 +26,14 @@ $$
 
 ## Bugs :lady_beetle:
 
-## TODO
+### TODO
 
 - [ ] Corrigir o evento `OnMouseEnd` do campo "Número de Carência" para evitar loops infinitos.
 - [ ] Corrigir o evento `OnMouseEnd` nas tabelas para evitar loops infinitos quando os campos não são informados.
 - [ ] Implementar os princípios SOLID.
 - [ ] Aplicar Clean Code em todas as classes, métodos e variáveis.
 
-## DONE
+### DONE
 
 - [x] Ajustar os cálculos para limitar a precisão a 4 casas decimais.
 
@@ -45,14 +45,6 @@ $$
 >   - [X] Rodape da Tabelas
 >   - [ ] ...
 
-|SAC sem carência|
-|--|
-|![Sac se Carenca](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/master/image/SAC/SAC%20sem%20Carencia.png)|
-
-|SAC com Carência  e Pagamento dos Juros|SAC com Carência  e Capitalização dos Juros|SAC com Carência com Juros Capitalizados e Acrescidos ao Saldo Devedor|
-|--|--|--|
-|![SAC com Carência e Pagamento dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/master/image/SAC/SAC%20com%20Car%C3%AAncia%204%20meses%20e%20Pagamento%20dos%20Juros.png)|![SAC com Carência e Capitalização dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SAC/SAC%20com%20Car%C3%AAncia%204%20meses%20e%20Capitaliza%C3%A7%C3%A3o%20dos%20Juros.png)|![SAC com Carência com Juros Capitalizados e Acrescidos ao Saldo Devedor](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SAC/SAC%20com%20Car%C3%AAncia%204%20meses%20com%20Juros%20Capitalizados%20e%20Acrescidos%20ao%20Saldo%20Devedor.png)|
-
 > - [X] Calculo da tabela SAC - Sistema de Amortização Constante
 >   - [x] Calcular a Amortização do SAC
 >   - [x] Calcular o Saldo Atual do SAC
@@ -60,36 +52,34 @@ $$
 >   - [x] Calcular a Prestação do SAC
 >   - [X] Exibir imagem de Deboche do SAC
 
-|SPC sem carência|SPC com Carência e Pagamento dos Juros|SPC com Carência e Capitalização dos Juros|
-|--|--|--|
-|![SPC sem carência](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SPC/SPC%20sem%20car%C3%AAncia.png)|![SPC com Carência e Pagamento dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SPC/SPC%20com%20Car%C3%AAncia%204%20meses%20e%20Pagamento%20dos%20Juros.png)|![SPC com Carência e Capitalização dos Juros](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/ad0284b57a68640fcdc9b73c3dd54fe57bbbad7e/image/SPC/SPC%20com%20Car%C3%AAncia%204%20meses%20e%20Capitaliza%C3%A7%C3%A3o%20dos%20Juros.png)|
-
 > - [X] Calculo da tabela SPC - Sistema de Prestação Constante
 >   - [X] Calcular a Prestação do SPC
 >   - [x] Calcular o Juros do SPC
 >   - [X] Calcular a Amortização do SPC
 >   - [x] Calcular o Saldo Atual do SPC
->   - [X] Deboche do SPC
-
-|SAM sem carência|
-|--|
-|![SAM sem carência](https://github.com/carloseduardonit/simulador-de-emprestimo/blob/afecb71486ed0aa78f822cfe2d72fabd283dd878/image/SAM/SAM%20sem%20carencia.png)|
+>   - [X] Exibir imagem de Deboche do SPC
 
 > - [x] Calculo da tabela SAM - Sistema de Amortização Mista
 >   - [x] Calcular a Amortização do SAM
 >   - [x] Calcular o Saldo Atual do SAM
 >   - [x] Calcular o Juros do SAM
 >   - [x] Calcular a Prestação do SAM
->   - [X] Deboche do SAM
+>   - [X] Exibir imagem de Deboche do SAM
 > - [x] Adicionado ADSENDE
 
 ## :writing_hand: Linguagens utilizadas
 
 >![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
+<details>
+
+<summary>
+
 ## :writing_hand:  Este documento e escrito em
 
+</summary>
 > ![Markdown](https://img.shields.io/badge/Markdown-000?style=for-the-badge&logo=markdown)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+</details>
 
 <details>
 
