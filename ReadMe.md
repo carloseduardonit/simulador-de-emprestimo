@@ -39,27 +39,32 @@ $$
 
 ## Funcionalidade
 
-> - [ ] Funçoes da comuns das tabelas
+> - [ ] Funções da comuns das tabelas
+>   - [X] Criar JSDoc
 >   - [X] Calcular a Media em 2 numeros
+>   - [x] Calcular a Amortização do SAC
+>   - [x] Calcular o Saldo Atual do SAC
+>   - [x] Calcular o Juros do SAC
+>   - [x] Calcular a Prestação do SAC
 >   - [X] Cabeçalho da Tabelas
 >   - [X] Rodape da Tabelas
 >   - [ ] ...
-
 > - [X] Calculo da tabela SAC - Sistema de Amortização Constante
+>   - [X] Criar JSDoc
 >   - [x] Calcular a Amortização do SAC
 >   - [x] Calcular o Saldo Atual do SAC
 >   - [x] Calcular o Juros do SAC
 >   - [x] Calcular a Prestação do SAC
 >   - [X] Exibir imagem de Deboche do SAC
-
 > - [X] Calculo da tabela SPC - Sistema de Prestação Constante
+>   - [X] Criar JSDoc
 >   - [X] Calcular a Prestação do SPC
 >   - [x] Calcular o Juros do SPC
 >   - [X] Calcular a Amortização do SPC
 >   - [x] Calcular o Saldo Atual do SPC
 >   - [X] Exibir imagem de Deboche do SPC
-
 > - [x] Calculo da tabela SAM - Sistema de Amortização Mista
+>   - [X] Criar JSDoc
 >   - [x] Calcular a Amortização do SAM
 >   - [x] Calcular o Saldo Atual do SAM
 >   - [x] Calcular o Juros do SAM
@@ -67,9 +72,13 @@ $$
 >   - [X] Exibir imagem de Deboche do SAM
 > - [x] Adicionado ADSENDE
 
+---
+
 ## :writing_hand: Linguagens utilizadas
 
 >![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+---
 
 <details>
 
@@ -78,8 +87,12 @@ $$
 ## :writing_hand:  Este documento e escrito em
 
 </summary>
+
 > ![Markdown](https://img.shields.io/badge/Markdown-000?style=for-the-badge&logo=markdown)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
 </details>
+
+---
 
 <details>
 
@@ -122,6 +135,7 @@ $$
 - [Cards](https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/utils/cards/github-stats.md)
 - [Sintaxe básica de gravação e formatação no GitHub](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - [Trabalhar com formatação avançadano GitHub](https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting)
+- [text](<Bibliografia/Assaf Neto - Matemática Financeira 2.pdf>)
 
 </details>
 
