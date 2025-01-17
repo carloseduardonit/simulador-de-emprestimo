@@ -32,6 +32,7 @@ $$
 - [ ] Corrigir o evento `OnMouseEnd` nas tabelas para evitar loops infinitos quando os campos não são informados.
 - [ ] Implementar os princípios SOLID.
 - [ ] Aplicar Clean Code em todas as classes, métodos e variáveis.
+- [ ] Corrigir o acesso adsende
 
 ### DONE
 
