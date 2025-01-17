@@ -8,33 +8,38 @@
 ## Dados do projeto
 
 > - URL: [Acesse Aqui](https://simulador-de-emprestimo-two.vercel.app/)
-> - Tempo medio de Elaboração: 50 horas :hourglass_flowing_sand:
+> - Tempo medio de Elaboração: 80 horas :hourglass_flowing_sand:
 
 <img src = "https://github.com/carloseduardonit/simulador-de-emprestimo/blob/master/image/884malT%20-%20Imgur.gif" width ="700" alt ="gf"/>
 
 ## Objetivo
 
-> - Mostrar meu conhecimento em HTML, CSS, Javascripts
->   - Utilzação  de Eventos
->   - Maniipulação  de Matriz
->   - Orientação a Objetos
-> - Mostrar meus conhecimentos em Matematica Financeira.
->   - Calcular das prestações do tipo de amortização SPC pela formula
+- Proficiência em HTML, CSS e JavaScript
+  - Utilização de Eventos
+  - Manipulação de Arrays
+  - Programação Orientada a Objetos
+- Expertise em Matemática Financeira
+  - Cálculo de parcelas de empréstimo usando a fórmula de amortização SPC
 
 $$ \text{PMT} = \frac{\text{PV}}{ \left(\frac{1 - (1 + i)^{-n}}{i}\right)}
 $$
 
 ## Bugs :lady_beetle:
 
-- [ ] Evento OnMouseEnd do Campo [Numero de Carencia], criar um loop infinito no sistema
-- [ ] Evento onMouseEnd nas tabelas, caso os campos não seja informado, criar um loop infinito no sistema.
-- [x] Os calculos está com precisão de mais de 4 casas decimais;
-- [ ] Não utiliizei SOLID
-- [ ] Não utilizei Clean Code em toda Classes, Metodos e Variaveis
+## TODO
+
+- [ ] Corrigir o evento `OnMouseEnd` do campo "Número de Carência" para evitar loops infinitos.
+- [ ] Corrigir o evento `OnMouseEnd` nas tabelas para evitar loops infinitos quando os campos não são informados.
+- [ ] Implementar os princípios SOLID.
+- [ ] Aplicar Clean Code em todas as classes, métodos e variáveis.
+
+## DONE
+
+- [x] Ajustar os cálculos para limitar a precisão a 4 casas decimais.
 
 ## Funcionalidade
 
-> - [ ] Função Basica
+> - [ ] Funçoes da comuns das tabelas
 >   - [X] Calcular a Media em 2 numeros
 >   - [X] Cabeçalho da Tabelas
 >   - [X] Rodape da Tabelas
@@ -53,7 +58,7 @@ $$
 >   - [x] Calcular o Saldo Atual do SAC
 >   - [x] Calcular o Juros do SAC
 >   - [x] Calcular a Prestação do SAC
->   - [X] Deboche do SAC
+>   - [X] Exibir imagem de Deboche do SAC
 
 |SPC sem carência|SPC com Carência e Pagamento dos Juros|SPC com Carência e Capitalização dos Juros|
 |--|--|--|
