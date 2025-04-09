@@ -2,7 +2,10 @@
     box-sizing: border-box;
 }
 
-
+span{
+    color: red;
+    font-size: 16px;
+}
 th.preto{
     background-color: black;
     border: black;
@@ -43,7 +46,7 @@ table.simulacao {
     font-size:14px;
 }
 th.thCarencia{
-    background-color:yellow;
+    background-color:skyblue;
     font-size: 14px;
     font-weight: bold;
     padding: 8px;

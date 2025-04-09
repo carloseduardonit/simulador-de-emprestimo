@@ -5,14 +5,18 @@
 > - Clique nos Titulos abaixo para ver os paragrafos conforme a demostração: :point_down:
 > <img src="/.gitbook/assets/demostracao.gif" alt="Demostração de com fazer">
 
-## Dados do projeto
+---
+
+## Dados do projeto: :point_left:
 
 > - URL: [Acesse Aqui](https://simulador-de-emprestimo-two.vercel.app/)
 > - Tempo medio de Elaboração: 80 horas :hourglass_flowing_sand:
 
-<img src = "https://github.com/carloseduardonit/simulador-de-emprestimo/blob/master/image/884malT%20-%20Imgur.gif" width ="700" alt ="gf"/>
+<img src = "https://github.com/carloseduardonit/simulador-de-emprestimo/blob/master/image/884malT%20-%20Imgur.gif" width ="700" alt ="versão 1"/>
 
-## Objetivo
+---
+
+## Objetivo: :point_left:
 
 - Proficiência em HTML, CSS e JavaScript
   - Utilização de Eventos
@@ -24,7 +28,9 @@
 $$ \text{PMT} = \frac{\text{PV}}{ \left(\frac{1 - (1 + i)^{-n}}{i}\right)}
 $$
 
-## Bugs :lady_beetle:
+---
+
+## :lady_beetle: Bugs: :point_left:
 
 ### TODO
 
@@ -32,14 +38,21 @@ $$
 - [ ] Corrigir o evento `OnMouseEnd` nas tabelas para evitar loops infinitos quando os campos não são informados.
 - [ ] Implementar os princípios SOLID.
 - [ ] Aplicar Clean Code em todas as classes, métodos e variáveis.
+- [ ] Melhoria na exibição do valor  de porcetagem na tabela
 - [ ] Corrigir o acesso adsende
 
 ### DONE
 
 - [x] Ajustar os cálculos para limitar a precisão a 4 casas decimais.
 
-## Funcionalidade
+---
 
+## Funcionalidade: :point_left:
+
+> - [ ] Funções da estrutura da tabelas
+>   - [ ] Criar JSDoc
+>   - [X] Cabeçalho da Tabelas
+>   - [X] Rodape da Tabelas
 > - [ ] Funções da comuns das tabelas
 >   - [X] Criar JSDoc
 >   - [X] Calcular a Media em 2 numeros
@@ -47,8 +60,6 @@ $$
 >   - [x] Calcular o Saldo Atual do SAC
 >   - [x] Calcular o Juros do SAC
 >   - [x] Calcular a Prestação do SAC
->   - [X] Cabeçalho da Tabelas
->   - [X] Rodape da Tabelas
 >   - [ ] ...
 > - [X] Calculo da tabela SAC - Sistema de Amortização Constante
 >   - [X] Criar JSDoc
@@ -75,9 +86,9 @@ $$
 
 ---
 
-## :writing_hand: Linguagens utilizadas
+## :writing_hand: Linguagens e ferramentas utilizadas: :point_left:
 
->![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+>![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)![Vercel](https://img.shields.io/badge/Vercel-000000.svg?style=for-the-badge&logo=Vercel&logoColor=white)
 
 ---
 
@@ -85,7 +96,7 @@ $$
 
 <summary>
 
-## :writing_hand:  Este documento e escrito em
+## :writing_hand:  Este documento e escrito em: :point_left:
 
 </summary>
 
@@ -99,7 +110,7 @@ $$
 
 <summary>
 
-## 📬 Entre em contato pelo :point_left:
+## 📬 Entre em contato pelo: :point_left:
 
 </summary>
 
@@ -109,7 +120,7 @@ $$
 
 ---
 
-## :coffee: Colabore para o cafezinho :coffee:
+## :coffee: Colabore para o cafezinho :point_left:
 
 <img  src ="https://github.com/carloseduardonit/conector-do-carlos/blob/bbacf217c11df84b7826304709271bf0d854d1ee/Qr%20PIX.jpg" width="200"/>
 
@@ -124,7 +135,7 @@ $$
 
 <summary>
 
-## :books: Material de Suporte :point_left:
+## :books: Material de Suporte: :point_left:
 
 </summary>
 

@@ -137,3 +137,15 @@ function ecarencia(mes, numeroCarencia) {
         return 'class = "thPrestacao"';
     }
 }
+
+function explicar() {
+    let valorEmprestimoHTML = converterHTMLtoFloat(document.getElementById('valorEmprestimo'));
+    let taxaJurosHTML = converterHTMLtoFloat(document.getElementById('taxaJuros'));
+    let numeroCarenciaHTML = converterHTMLtoInt(document.getElementById('numeroCarencia'));
+    let numeroPrestacaoHTML = converterHTMLtoInt(document.getElementById('numeroPrestacao'));
+if (Validacao.erroPreenchimento(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML)) {
+    document.getElementById("tabelaSAC").innerHTML = '<p>Para o cálculo da tabela de amortização, é necessário preencher todos os campos com valores válidos.</p>';
+    document.getElementById("tabelaSPC").innerHTML = '<p>Para o cálculo da tabela de amortização, é necessário preencher todos os campos com valores válidos.</p>';
+    document.getElementById("tabelaSAM").innerHTML = '<p s>Para o cálculo da tabela de amortização, é necessário preencher todos os campos com valores válidos.</p>';
+}
+}
