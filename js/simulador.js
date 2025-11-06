@@ -144,8 +144,8 @@ function explicar() {
     let numeroCarenciaHTML = converterHTMLtoInt(document.getElementById('numeroCarencia'));
     let numeroPrestacaoHTML = converterHTMLtoInt(document.getElementById('numeroPrestacao'));
 if (Validacao.erroPreenchimento(valorEmprestimoHTML, taxaJurosHTML, numeroCarenciaHTML, numeroPrestacaoHTML)) {
-    document.getElementById("tabelaSAC").innerHTML = '<p>Para o cálculo da tabela de amortização, é necessário preencher todos os campos com valores válidos.</p>';
-    document.getElementById("tabelaSPC").innerHTML = '<p>Para o cálculo da tabela de amortização, é necessário preencher todos os campos com valores válidos.</p>';
-    document.getElementById("tabelaSAM").innerHTML = '<p s>Para o cálculo da tabela de amortização, é necessário preencher todos os campos com valores válidos.</p>';
+    document.getElementById("tabelaSAC").innerHTML = '<p class="aviso">Para o cálculo da tabela de amortização, é necessário preencher todos os campos com valores válidos.</p>';
+    document.getElementById("tabelaSPC").innerHTML = '<p class="aviso">Para o cálculo da tabela de amortização, é necessário preencher todos os campos com valores válidos.</p>';
+    document.getElementById("tabelaSAM").innerHTML = '<p class="aviso">Para o cálculo da tabela de amortização, é necessário preencher todos os campos com valores válidos.</p>';
 }
 }

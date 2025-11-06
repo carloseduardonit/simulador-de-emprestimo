@@ -76,3 +76,8 @@ th.thPrestacao{
     display: table-column-group;
     clear: both;
 }
+
+p.aviso{
+    color: red;
+    font-size: 14px;
+}
