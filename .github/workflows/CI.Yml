@@ -1,6 +1,7 @@
 jobs:
   on:
-    # Trigger the workflow on push or pull request events to the main branch
+    # Acionar o fluxo de trabalho em eventos de push
+    # ou pull request para a branch principal
     push:
       branches:
         - main
@@ -8,19 +9,19 @@ jobs:
       branches:
         - main
   build:
-    # Build job configuration
+    # Configuração do trabalho de build
     runs-on: ubuntu-latest
 
     steps:
-    # Steps configuration
+    # Configuração dos passos
     - uses: actions/checkout@v2
-    # Set up Node.js environment
+    # Configurar ambiente Node.js
     - name: Set up Node.js
-      # Use the official Node.js action to set up the environment
+      # Usa a ação oficial do Node.js para configurar o ambiente
       uses: actions/setup-node@v2
       with:
-        # Specify the Node.js version to use
-        node-version: ['14', '15', '16', '17', '18', '19', '20']
+      # Especifica a versão do Node.js a ser utilizada
+      node-version: ['14', '15', '16', '17', '18', '19', '20']
     - name: Install dependencies
       run: npm install
     - name: Install Cypress
