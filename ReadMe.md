@@ -40,6 +40,16 @@ $$
 - [ ] Aplicar Clean Code em todas as classes, métodos e variáveis.
 - [ ] Melhoria na exibição do valor  de porcetagem na tabela
 - [ ] Corrigir o acesso adsende
+- [ ] Não esta prenchendo o  campo "Vai pagar Juros na carência como?" pelo teste
+
+ ```JavaScript
+  cy.get('#numeroCarencia').invoke('val').then((texto) => {
+      const numero = parseFloat(texto);
+      if (numero > 0) {
+         cy.get('#tipoCarencia').select('CJ', { force: true }).wait(1000);
+      }
+    });
+ ```
 
 ### DONE
 
