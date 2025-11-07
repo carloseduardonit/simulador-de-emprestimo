@@ -15,4 +15,5 @@ jobs:
         node-version: ['14', '15', '16', '17', '18', '19', '20']
     - name: Install dependencies
       run: npm install
-    
+    - name: Install Cypress
+      run: npm install Cypress -d
