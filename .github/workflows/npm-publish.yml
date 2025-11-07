@@ -18,8 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     # Define os passos do job
     strategy:
+      # Define uma matriz de estratégias para o job
       matrix:
-        node-version: [18.x, 20.x]
+        # Define a versão do Node.js a ser usada
+        node-version: [20.x]
     
     steps:
       # 1️⃣ Faz o checkout do código-fonte
@@ -47,7 +49,7 @@ jobs:
       # 5️⃣ Executa os testes do Cypress (modo headless)
       - name: Run Cypress tests
         run: npx cypress run --headless
-      # 5️⃣ Executa os testes do Cypress (modo headless) e coleta artefatos
+      #  Executa os testes do Cypress (modo headless) e coleta artefatos
       - name: Upload Cypress artifacts
         uses: actions/upload-artifact@v4
         with:

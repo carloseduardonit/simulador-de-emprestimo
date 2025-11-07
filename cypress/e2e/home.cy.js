@@ -14,6 +14,7 @@ describe('template spec', () => {
     });
     cy.get('#numeroPrestacao').clear().type('36');
     cy.get('#btnSimular').click();
+    //cy.wait(10000).screenshot();
   });
 });
 
