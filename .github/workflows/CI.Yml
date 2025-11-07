@@ -1,13 +1,17 @@
+name: CI
+
+on:
+  # Acionar o fluxo de trabalho em eventos de push
+  # ou pull request para a branch principal
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
-  on:
-    # Acionar o fluxo de trabalho em eventos de push
-    # ou pull request para a branch principal
-    push:
-      branches:
-        - main
-    pull_request:
-      branches:
-        - main
+ 
   build:
     # Configuração do trabalho de build
     runs-on: ubuntu-latest
