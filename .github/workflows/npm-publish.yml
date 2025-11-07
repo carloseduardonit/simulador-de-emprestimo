@@ -1,5 +1,5 @@
 name: CI
-
+# Workflow para executar testes Cypress em pushes e pull requests na branch master
 on:
   push:
     # Dispara o workflow em pushes para a branch master
