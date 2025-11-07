@@ -1,6 +1,22 @@
 {
   "name": "simulador-de-emprestimo",
-  "packageManager": "yarn@4.10.3",
+  "version": "1.0.0",
+  "description": "> [!IMPORTANT]\r >\r > - Clique nos Titulos abaixo para ver os paragrafos conforme a demostração: :point_down:\r > <img src=\"/.gitbook/assets/demostracao.gif\" alt=\"Demostração de com fazer\">",
+  "homepage": "https://github.com/carloseduardonit/simulador-de-emprestimo#readme",
+  "bugs": {
+    "url": "https://github.com/carloseduardonit/simulador-de-emprestimo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carloseduardonit/simulador-de-emprestimo.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
   "devDependencies": {
     "cypress": "^15.6.0"
   }
