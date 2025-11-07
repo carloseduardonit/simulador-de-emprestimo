@@ -1,34 +1,7 @@
 {
   "name": "simulador-de-emprestimo",
-  "version": "1.0.0",
-  "description": "Simulador de emprestimo bancario simples feito em JavaScript.",
-  "homepage": "https://github.com/carloseduardonit/simulador-de-emprestimo#readme",
-  "bugs": {
-    "url": "https://github.com/carloseduardonit/simulador-de-emprestimo/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/carloseduardonit/simulador-de-emprestimo.git"
-  },
-  "license": "ISC",
-  "author": "Carlos Eduardo",
-  "type": "commonjs",
-  "main": "index.js",
-  "scripts": {
-    "cy_test": "npx cypress open"
-  },
-  "dependencies": {
-    "entities": "^4.5.0",
-    "markdown-it": "^14.1.0",
-    "argparse": "^2.0.1",
-    "uc.micro": "^2.1.0",
-    "mdurl": "^2.0.0",
-    "linkify-it": "^5.0.0",
-    "markdownlint-micromark": "^0.1.9",
-    "punycode.js": "^2.3.1"
-  },
+  "packageManager": "yarn@4.10.3",
   "devDependencies": {
-    "markdownlint": "^0.34.0",
-    "cypress": "^12.17.1"
+    "cypress": "^15.6.0"
   }
 }

@@ -1,3 +1,7 @@
 # Ignore node modules and VSCode settings
 /node_modules
 /.vscode
+/.yarn
+# Ignore environment files
+/.editorconfig
+/.gitattributes
