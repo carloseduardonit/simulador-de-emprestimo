@@ -22,7 +22,7 @@ jobs:
     # Configurar ambiente Node.js
     - name: Set up Node.js
       # Usa a ação oficial do Node.js para configurar o ambiente
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
       # Especifica a versão do Node.js a ser utilizada
       node-version: ['14', '15', '16', '17', '18', '19', '20']
