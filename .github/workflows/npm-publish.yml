@@ -1,18 +1,26 @@
 name: CI
 # Workflow para executar testes Cypress em pushes e pull requests na branch master
 on:
+  # Dispara o workflow em pull requests para a branch master
   push:
     # Dispara o workflow em pushes para a branch master
     branches:
       - master
+  # Dispara o workflow em pull requests para a branch master
   pull_request:
     branches:
       - master
 
 jobs:
+  # Define o job de build
   build:
+    # Define o ambiente de execução do job
     runs-on: ubuntu-latest
-
+    # Define os passos do job
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
     steps:
       # 1️⃣ Faz o checkout do código-fonte
       - name: Checkout repository
@@ -22,7 +30,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20  # escolha uma versão estável, ex: 18 ou 20
+          # Configura o registro do npm
+          registry-url: https://registry.npmjs.org/
+          # Configura a versão do Node.js
+          node-version: ${{ matrix.node-version }}
 
       # 3️⃣ Instala dependências do projeto
       - name: Install dependencies
@@ -31,10 +42,16 @@ jobs:
       # 4️⃣ Instala o Cypress (opcional se já estiver no package.json)
       - name: Install Cypress
         run: npm install cypress --save-dev
+      
 
       # 5️⃣ Executa os testes do Cypress (modo headless)
       - name: Run Cypress tests
-        run: npx cypress run
-
-
+        run: npx cypress run --headless
+      # 5️⃣ Executa os testes do Cypress (modo headless) e coleta artefatos
+      - name: Upload Cypress artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-results
+          path: cypress/videos/
+          
 
