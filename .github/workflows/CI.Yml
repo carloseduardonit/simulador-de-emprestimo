@@ -1,4 +1,12 @@
 jobs:
+  on:
+    # Trigger the workflow on push or pull request events to the main branch
+    push:
+      branches:
+        - main
+    pull_request:
+      branches:
+        - main
   build:
     # Build job configuration
     runs-on: ubuntu-latest
