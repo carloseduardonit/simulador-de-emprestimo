@@ -1,8 +1,6 @@
 name: CI
 
 on:
-  # Acionar o fluxo de trabalho em eventos de push
-  # ou pull request para a branch principal
   push:
     branches:
       - main
@@ -11,24 +9,31 @@ on:
       - main
 
 jobs:
- 
   build:
-    # Configuração do trabalho de build
     runs-on: ubuntu-latest
-    
+
     steps:
-    # Configuração dos passos
-    - uses: actions/checkout@v4
-    # Configurar ambiente Node.js
-    - name: Set up Node.js
-      # Usa a ação oficial do Node.js para configurar o ambiente
-      uses: actions/setup-node@v4
-      with:
-        # Especifica a versão do Node.js a ser utilizada
-        node-version: '20'
-    - name: Install dependencies
-      run: npm install
-    - name: Install Cypress
-      run: npm install Cypress -d
+      # 1️⃣ Faz o checkout do código-fonte
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2️⃣ Configura o Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20  # escolha uma versão estável, ex: 18 ou 20
+
+      # 3️⃣ Instala dependências do projeto
+      - name: Install dependencies
+        run: npm install
+
+      # 4️⃣ Instala o Cypress (opcional se já estiver no package.json)
+      - name: Install Cypress
+        run: npm install cypress --save-dev
+
+      # 5️⃣ Executa os testes do Cypress (modo headless)
+      - name: Run Cypress tests
+        run: npx cypress run
+
 
 
