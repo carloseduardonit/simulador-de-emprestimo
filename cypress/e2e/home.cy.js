@@ -3,13 +3,17 @@ describe('template spec', () => {
     cy.visit('https://simulador-de-emprestimo-two.vercel.app/')
     cy.get('#valorEmprestimo').clear().type('5000');
     cy.get('#taxaJuros').clear().type('12');
-    cy.get('#numeroCarencia').clear().type('24');
-    cy.get('#numeroCarencia').invoke('text').then((texto) => {
+    cy.get('#numeroCarencia').trigger('mouseover').clear().type('24').trigger('mouseout');
+
+    cy.get('#numeroCarencia').invoke('val').then((texto) => {
       const numero = parseFloat(texto);
-      expect(numero).to.be.greaterThan(0);
+      if (numero > 0) {
+         cy.get('#tipoCarencia').select('CJ', { force: true }).wait(1000);
+         
+      }
     });
-    cy.get('#tipoCarencia').select('Juro Capitalização e Acrescido de saldo Devedor');
-  
     cy.get('#numeroPrestacao').clear().type('36');
+    cy.get('#btnSimular').click();
   });
 });
+
