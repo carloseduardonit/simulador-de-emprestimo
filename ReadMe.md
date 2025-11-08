@@ -26,12 +26,12 @@
 - 🧩 Aplicar integração contínua com GitHub Actions
 - 🧪 Implementar testes automatizados com Cypress
 - 🎓 Consolidar conhecimentos em desenvolvimento web
-- Proficiência em HTML, CSS e JavaScript
-  - Utilização de Eventos
-  - Manipulação de Arrays
-  - Programação Orientada a Objetos
-- Expertise em Matemática Financeira
-  - Cálculo de parcelas de empréstimo usando a fórmula de amortização SPC
+  - Proficiência em HTML, CSS e JavaScript
+    - Utilização de Eventos
+    - Manipulação de Arrays
+    - Programação Orientada a Objetos
+  - Expertise em Matemática Financeira
+    - Cálculo de parcelas de empréstimo usando a fórmula de amortização SPC
 
 $$ \text{PMT} = \frac{\text{PV}}{ \left(\frac{1 - (1 + i)^{-n}}{i}\right)}
 $$
