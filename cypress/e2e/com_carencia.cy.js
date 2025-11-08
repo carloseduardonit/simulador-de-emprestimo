@@ -2,7 +2,7 @@ describe('Simulador de Empréstimo Com Carência ', () => {
   
   beforeEach(() => {
     cy.viewport(1280, 720);
-    cy.visit('https://simulador-de-emprestimo-two.vercel.app/');
+    cy.visit('./index.html');
     cy.get('#valorEmprestimo').clear().type('5000');
     cy.get('#taxaJuros').clear().type('12');
     cy.get('#numeroCarencia').trigger('mouseover').clear().type('24').trigger('mouseout');
