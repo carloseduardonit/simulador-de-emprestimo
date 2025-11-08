@@ -1,4 +1,8 @@
-# Simulador de Emprestimo
+# 💰 Simulador de Emprestimo
+
+🚀 Simulador de Empréstimo desenvolvido para calcular valores de financiamento com base em entradas como taxa de juros, prazo e valor solicitado.
+
+🧠 O projeto foi criado com o objetivo de praticar e demonstrar habilidades em desenvolvimento, lógica de programação e automação de testes, explorando conceitos modernos de CI/CD e Cypress para garantir qualidade e confiabilidade.
 
 > [!IMPORTANT]
 >
@@ -16,8 +20,12 @@
 
 ---
 
-## Objetivo: :point_left:
+## ⚙️ Principais objetivos: :point_left:
 
+- 💡 Aprimorar raciocínio lógico e boas práticas de código
+- 🧩 Aplicar integração contínua com GitHub Actions
+- 🧪 Implementar testes automatizados com Cypress
+- 🎓 Consolidar conhecimentos em desenvolvimento web
 - Proficiência em HTML, CSS e JavaScript
   - Utilização de Eventos
   - Manipulação de Arrays
@@ -44,11 +52,11 @@ $$
 
  ```JavaScript
   cy.get('#numeroCarencia').invoke('val').then((texto) => {
-      const numero = parseFloat(texto);
-      if (numero > 0) {
-         cy.get('#tipoCarencia').select('CJ', { force: true }).wait(1000);
-      }
-    });
+    const numero = parseFloat(texto);
+    if (numero > 0) {
+        cy.get('#tipoCarencia').select('CJ', { force: true }).wait(1000);
+    }
+  });
  ```
 
 ### DONE
